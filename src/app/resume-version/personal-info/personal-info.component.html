@@ -1,0 +1,95 @@
+<ion-card>
+  <ion-card-header>
+    <ion-icon [name]="personalInfo.icon"></ion-icon>
+    <h2>{{ personalInfo.title | translate }}</h2>
+  </ion-card-header>
+  <ion-item-divider color="light"></ion-item-divider>
+  <ion-card-content>
+    <form #form="ngForm" class="form-validate">
+      <ion-row>
+        <ion-col col-3>
+          <ion-item>
+            <ion-label floating>{{ 'First Name' | translate }}</ion-label>
+            <ion-input type="text" (ngModelChange)=" personalInfo.firstName=$event;onChangeName();" [ngModel]="personalInfo.firstName"
+              id="firstName" name="firstName" required></ion-input>
+            <div *ngIf="formErrors.firstName" class="input-field-error" style="display: block;">{{ formErrors.firstName | translate }}</div>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3>
+          <ion-item>
+            <ion-label floating>{{ 'Last Name' | translate }}</ion-label>
+            <ion-input type="text" (ngModelChange)="personalInfo.lastName=$event; onChangeName();" [ngModel]="personalInfo.lastName"
+              id="lastName" name="lastName" required></ion-input>
+            <div *ngIf="formErrors.lastName" class="input-field-error" style="display: block;">{{ formErrors.lastName | translate }}</div>
+          </ion-item>
+        </ion-col>
+        <ion-col col-6>
+          <ion-item>
+            <ion-label floating>{{ 'Full Name' | translate }}</ion-label>
+            <ion-input type="text" [(ngModel)]="personalInfo.fullName" id="fullName" name="fullName"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4>
+          <ion-item>
+            <ion-label floating>{{ 'Gender' | translate }}</ion-label>
+            <ion-input type="text" [(ngModel)]="personalInfo.gender" id="gender" name="gender" required></ion-input>
+            <div *ngIf="formErrors.gender" class="input-field-error" style="display: block;">{{ formErrors.gender | translate }}</div>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4>
+          <ion-item>
+            <ion-label floating>{{ 'Nationality' | translate }}</ion-label>
+            <ion-input type="text" [(ngModel)]="personalInfo.nationality" id="nationality" name="nationality"></ion-input>
+            <div *ngIf="formErrors.lastName" class="input-field-error" style="display: block;">{{ formErrors.lastName | translate }}</div>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4>
+          <ion-item>
+            <ion-label floating>{{ 'Date of Birth' | translate }}</ion-label>
+            <ion-input type="text" [(ngModel)]="personalInfo.dob" id="dob" name="dob"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4>
+          <ion-item>
+            <ion-label floating>{{ 'Address' | translate }}</ion-label>
+            <ion-input type="text" [(ngModel)]="personalInfo.address" id="address" name="address"></ion-input>
+            <div *ngIf="formErrors.gender" class="input-field-error" style="display: block;">{{ formErrors.gender | translate }}</div>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4>
+          <ion-item>
+            <ion-label floating>{{ 'City' | translate }}</ion-label>
+            <ion-input type="text" [(ngModel)]="personalInfo.city" id="city" name="city"></ion-input>
+            <div *ngIf="formErrors.lastName" class="input-field-error" style="display: block;">{{ formErrors.lastName | translate }}</div>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4>
+          <ion-item>
+            <ion-label floating>{{ 'Country' | translate }}</ion-label>
+            <ion-input type="text" [(ngModel)]="personalInfo.country" id="country" name="country"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+          <ion-item>
+            <ion-label floating>{{ 'Mobile' | translate }}</ion-label>
+            <ion-input type="text" [(ngModel)]="personalInfo.mobile" id="mobile" name="mobile"></ion-input>
+            <div *ngIf="formErrors.gender" class="input-field-error" style="display: block;">{{ formErrors.gender | translate }}</div>
+          </ion-item>
+        </ion-col>
+        <ion-col col-6>
+          <ion-item>
+            <ion-label floating>{{ 'Email' | translate }}</ion-label>
+            <ion-input type="text" [(ngModel)]="personalInfo.email" id="email" name="email" required></ion-input>
+            <div *ngIf="formErrors.email" class="input-field-error" style="display: block;">{{ formErrors.email | translate }}</div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-card-content>
+</ion-card>

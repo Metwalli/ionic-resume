@@ -1,0 +1,19 @@
+  <form [formGroup]="loginForm" (submit)="loginByEmail()" novalidate>
+          <ion-item>
+            <ion-label floating>{{ 'Email' | translate }}</ion-label>
+            <ion-input type="text" #email formControlName="email" type="email" (change)="elementChanged(email)"
+              [class.invalid]="!loginForm.controls.email.valid &&(emailChanged || submitAttempt)">
+            </ion-input>
+          </ion-item>       
+          <ion-item>
+            <ion-label floating>{{ 'Password' | translate }}</ion-label>
+            <ion-input type="text" #password formControlName="password" type="password" (change)="elementChanged(password)"
+              [class.invalid]="!loginForm.controls.password.valid &&(passwordChanged || submitAttempt)">
+            </ion-input>
+          </ion-item>
+        <div *ngIf="submitAttempt && loginError" layout-align="center">
+          <p>{{ 'The User Or Password is Invalid' | translate }}</p>
+        </div>     
+      <button ion-button color="light" type="submit">{{ 'Login' | translate }}</button>
+    
+  </form>

@@ -1,0 +1,10 @@
+  <nav class="mdl-navigation">
+    <a class="mdl-navigation__link" #editUserButton1 *ngIf="!authService.user" (click)="authType='sign-up';editUserDialog.show()">تسجيل جديد</a>
+    <a class="mdl-navigation__link" #editUserButton2 *ngIf="!authService.user" (click)="authType='login';editUserDialog.show()">تسجيل دخول</a>
+    <a class="mdl-navigation__link" *ngIf="authService.user" routerLink="/resume-version">Dashboard</a>
+    <a class="mdl-navigation__link" *ngIf="authService.user" (click)="authService.logout()">LogOut</a>
+    <a class="mdl-navigation__link" href="">عنا</a>
+  </nav>  
+  <mdl-layout-title class="android-title">
+    <a href="#">سيرتي</a>
+  </mdl-layout-title>

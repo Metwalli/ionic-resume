@@ -1,0 +1,18 @@
+<details (toggle)="onClick()">
+    <summary >
+        <ul>
+            <li class="titleName">
+                <ng-content select="expansion-panel-header"></ng-content>
+            </li>
+            <li>
+                <span>
+                    <ion-icon *ngIf="expanded" name="arrow-dropup"></ion-icon>
+                    <ion-icon *ngIf="!expanded" name="arrow-dropdown"></ion-icon>
+                </span>
+            </li>
+        </ul>
+    </summary>
+    <div class="content">
+        <ng-content select="expansion-panel-content"></ng-content>
+    </div>
+</details>

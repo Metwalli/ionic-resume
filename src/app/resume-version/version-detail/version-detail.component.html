@@ -1,0 +1,42 @@
+  <ion-row>
+    <ion-col col-3>
+      <ion-list>
+        <button ion-item>
+          <ion-icon [name]="version.personalInfo.icon"></ion-icon>
+          {{version.personalInfo.title}}
+        </button>
+        <button ion-item *ngFor="let s of version.sectionList">
+          <ion-icon [name]="s.icon"></ion-icon> 
+          {{ s.title }}
+        </button>  
+      </ion-list>
+    </ion-col>
+    <ion-col col-9>
+      <ion-header>
+        <ion-toolbar>
+          <ion-row>            
+            <a><ion-icon name="save">save</ion-icon></a>
+            <app-translate></app-translate>
+          </ion-row>         
+        </ion-toolbar>
+      </ion-header>
+      <div [dir]="_translateSevice.getDir()">
+        <ion-row justify-content-center>
+          <ion-col col-12 center>
+            <personal-info [personalInfo]="version.personalInfo"></personal-info>
+          </ion-col>
+        </ion-row>
+        <ion-row justify-content-center *ngFor="let s of version.sectionList">
+          <ion-col>
+            <section [section]="s" (removeSectionClick)="removeSection(version.sectionList.indexOf(s),$event)"></section>
+          </ion-col>
+        </ion-row>
+      </div>
+      <ion-fab top left>
+        <button ion-fab mini color="secondary"><ion-icon name="add"></ion-icon></button>
+        <ion-fab-list side="bottom">
+          <section-template (sectionClick)="addSection($event)"></section-template>
+        </ion-fab-list>
+      </ion-fab>
+    </ion-col>
+  </ion-row>

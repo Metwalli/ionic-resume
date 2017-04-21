@@ -1,0 +1,7 @@
+.md-fab-position-bottom-left {
+    position: fixed;
+    bottom: 10px;
+}
+ion-fab-list{
+    margin-bottom: 100px;
+}

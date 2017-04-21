@@ -1,0 +1,5 @@
+<ion-row>    
+        <button *ngFor="let lang of languageList" (click)="selectLang(lang)" >
+            <ion-icon name="">{{lang.symbol}}</ion-icon>
+        </button>    
+</ion-row>

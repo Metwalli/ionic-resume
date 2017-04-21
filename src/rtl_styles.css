@@ -1,0 +1,33 @@
+html {
+    direction: rtl;
+}
+/*md-sidenav .md-list-item md-icon {
+    margin-left: 16px;
+    margin-right: 0px!important;
+}*/
+
+[dir='rtl'] .md-input-placeholder {
+  right: 0;
+}
+.td-circle, .td-complete {
+  margin-right: 8px !important;
+  margin-left: 0 !important;
+}
+.td-vertical-line{
+  right: 20px !important;
+  left: 3px !important;
+}
+
+div#md-overlay-0.md-overlay-pane {
+    position: fixed !important;
+    left: 95px !important;
+    bottom: 10px !important;
+    transform: translateX(0) translateY(0) !important;
+}
+
+.ql-container .ql-editor {
+  min-height: 80px !important;
+}
+.ql-editor:focus {
+  border-bottom: 2px solid #ef6c00 !important;
+}

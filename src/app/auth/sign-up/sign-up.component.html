@@ -1,0 +1,23 @@
+<form [formGroup]="signupForm" (submit)="signup()" novalidate>
+  
+        <ion-item>
+          <ion-label floating>{{ 'Email' | translate }}</ion-label>
+          <ion-input type="text" #email formControlName="email" type="email" (change)="elementChanged(email)" 
+            [class.invalid]="!signupForm.controls.email.valid &&(emailChanged || submitAttempt)">
+          </ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label floating>{{ 'Password' | translate }}</ion-label>
+          <ion-input type="text" #password formControlName="password" type="password" (change)="elementChanged(password)" 
+            [class.invalid]="!signupForm.controls.password.valid &&(passwordChanged || submitAttempt)">
+          </ion-input>
+        </ion-item>
+     
+    <ion-row>
+      <div *ngIf="submitAttempt && signupError">
+        <p>{{ 'Cannot Sign Up' | translate }}</p>
+      </div>
+    </ion-row>
+    <button ion-button type="submit">{{ 'Sign Up' | translate }}</button>
+</form>

@@ -1,0 +1,9 @@
+<div class="android-navigation-container">        
+      <nav class="android-navigation mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" #editUserButton1 *ngIf="!authService.user" (click)="elementClick('sign-up')">تسجيل جديد</a>
+        <a class="mdl-navigation__link" #editUserButton2 *ngIf="!authService.user" (click)="elementClick('login')">تسجيل دخول</a>
+        <a class="mdl-navigation__link" *ngIf="authService.user" (click)="goToVersionList()">Dashboard</a>
+        <a class="mdl-navigation__link" *ngIf="authService.user" (click)="authService.logout()">LogOut</a>
+        <a class="mdl-navigation__link" href="">عنا</a>               
+      </nav>
+    </div>

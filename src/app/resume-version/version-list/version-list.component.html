@@ -1,0 +1,43 @@
+<ion-toolbar style="position:inherit;" color="primary">
+</ion-toolbar>
+<ion-grid>
+<ion-row justify-content-center>
+  <ion-col col-sm-12 col-md-10 col-lg-8>
+    <ion-card style="position:relative;margin-top: -64px;max-width: 1000px">
+      <ion-card-header>
+        <ion-title>
+          Resume List
+        </ion-title>
+      </ion-card-header>
+      <ion-item-divider color="light"></ion-item-divider>
+      <ion-card-content>
+        <ion-row center>
+          <ion-col col-4 *ngFor="let v of versionList | async">
+            <ion-card>
+              <ion-toolbar color="secondary">                
+                {{v.name}}
+              </ion-toolbar>              
+              <ion-card-content>
+
+              </ion-card-content>
+              <ion-row>
+                <ion-col>
+                  <button ion-button color="light" clear small (click)="duplicateVersion(v)">{{ 'Duplicate' | translate }}</button>
+                </ion-col>
+                <ion-col>
+                  <button ion-button color="secondary" clear small [routerLink]="[v.$key]">{{ 'Edite' | translate }}</button>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <button ion-button color="light" default (click)="addVersion()">{{ 'New Version' | translate }}</button>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-row>
+</ion-grid>

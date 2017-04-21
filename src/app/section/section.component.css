@@ -1,0 +1,83 @@
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+	padding-top: 10px;
+}
+ul blockquote{
+	font-size: 14px;
+	font-weight: bold;
+}
+.col-md-12 h3{
+	--border-bottom: 2px solid #31A3DD;
+}
+.dl-horizontal dt{
+	text-align: left;
+	width: 120px;
+}
+.dl-horizontal dd{
+	margin-left: 14px;
+}
+.ng-invalid .ng-dirty {
+ border-color: #FA787E;
+}
+.ng-valid .ng-dirty {
+ border-color: #78FA89;
+}
+.panel {
+	border-radius: 0px;
+}
+.btn{
+	border-radius: 0px;
+}
+.section-list{
+	float: left;
+}
+
+.remove-section{
+	font-size: 24px;
+	display: inline-block;
+}
+.remove-section span:hover{
+	color: red;
+}
+.section-heading{
+	display: flex;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;    
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 1px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.tooltip .tooltiptext {
+    top: 15px;
+    left: 120%; 
+}
+.tooltip .tooltiptext::before {
+    content: " ";
+    position: absolute;
+    top: 50%; /* At the bottom of the tooltip */
+    right: 100%;
+    margin-top: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}

@@ -1,0 +1,32 @@
+<!--<expansion-panel-group #panelGroup>
+		<expansion-panel *ngFor="let itm of section.itemList">
+			<expansion-panel-header>
+				{{itm.name}}
+			</expansion-panel-header>
+			<expansion-panel-content>
+				
+					<education-item [item]="itm"></education-item>
+				
+			</expansion-panel-content>
+		</expansion-panel>
+	</expansion-panel-group>
+<ion-item-divider color="light"></ion-item-divider>
+<ion-row>
+	<ion-col>
+		<button ion-button color="secondary" (click)="addItem()">{{ 'Add Item' | translate }}</button>
+	</ion-col>
+</ion-row>-->
+
+<expansion-panel-group #panelGroup>
+	<expansion-panel *ngFor="let itm of section.itemList" [title]="itm.name">
+		<expansion-panel-header>{{itm.name}}</expansion-panel-header>
+		<expansion-panel-content>
+			<education-item [item]="itm"></education-item>
+		</expansion-panel-content>
+	</expansion-panel>
+</expansion-panel-group>
+<ion-row>
+	<ion-col>
+		<button ion-button small color="secondary" (click)="addItem()">{{ 'Add Item' | translate }}</button>
+	</ion-col>
+</ion-row>

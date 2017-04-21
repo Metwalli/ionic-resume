@@ -1,0 +1,28 @@
+<ion-card>
+      <ion-card-header>
+        <!--<div class="remove-section pull-right">
+          <span class="icon ion-close-circled" *ngIf="!required" (click)="removeSection()"></span>
+        </div> -->
+        <!--<md-input placeholder="{{ 'Title' | translate }}" [(ngModel)]="section.title" name="title"></md-input> -->
+        
+        <!--<span layout-padding class="icon {{section.icon}}"></span>-->
+        <ion-icon [name]="section.icon"></ion-icon>
+        {{ section.title | translate }}        
+      </ion-card-header>
+      <ion-item-divider color="light"></ion-item-divider>
+      <ion-card-content>      
+        <div [ngSwitch]="section.type">             
+          <!--<language *ngSwitchCase="'language'" [section]="section"></language>       -->
+          <education *ngSwitchCase="'education'" [section]="section"></education>
+          <!--<experience *ngSwitchCase="'experience'" [section]="section"></experience>
+          <skills *ngSwitchCase="'skills'" [section]="section"></skills>
+          <certificate *ngSwitchCase="'certificate'" [section]="section" ></certificate>
+          <award *ngSwitchCase="'award'" [section]="section" ></award>
+          <publication *ngSwitchCase="'publication'" [section]="section" ></publication>
+          <reference *ngSwitchCase="'reference'" [section]="section" ></reference>
+          <volunteering *ngSwitchCase="'volunteering'" [section]="section" ></volunteering>
+          <hobbies *ngSwitchCase="'hobbies'" [section]="section"></hobbies>
+          <other-text *ngSwitchCase="'other-text'" [other]="section.itemList"></other-text>-->
+        </div> 
+      </ion-card-content>     
+</ion-card>
