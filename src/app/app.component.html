@@ -1,3 +1,33 @@
-<h1>
-  {{title}}
-</h1>
+
+  <ion-toolbar color="primary">
+    <ion-row>
+      <ion-col>
+        <ion-title>
+          <app-title></app-title>
+        </ion-title>
+      </ion-col>
+      <ion-col>
+        <app-main-menu (authAction)="showDialog($event)"></app-main-menu>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+<ion-content>
+  <router-outlet></router-outlet>
+  <div style="padding-bottom:90px;"></div>
+</ion-content>
+<!--<div class="demo-container" mdl-shadow="2">
+   <mdl-layout mdl-layout-mode="waterfall">
+      <mdl-layout-header>
+        <mdl-layout-header-row>
+         <app-main-menu (authAction)="showDialog($event)"></app-main-menu>
+         <mdl-layout-spacer></mdl-layout-spacer>
+         <app-title></app-title>
+        </mdl-layout-header-row>
+      </mdl-layout-header>
+      <mdl-layout-drawer class="android-drawer"> 
+      </mdl-layout-drawer>
+      <mdl-layout-content>
+          <router-outlet></router-outlet>      
+      </mdl-layout-content>
+   </mdl-layout>
+</div>-->
