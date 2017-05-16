@@ -1,0 +1,15 @@
+<ion-toolbar style="position:inherit;" color="primary">
+</ion-toolbar>
+<ion-grid>
+<ion-row justify-content-center>
+    <ion-card style="position:relative;margin-top: -64px;max-width: 840px">
+      <ion-card-header>        
+          <ng-content select="card-over-header"></ng-content>        
+      </ion-card-header>
+      <ion-card-content>
+        <ng-content select="card-over-content"></ng-content>
+      </ion-card-content>
+      <ng-content></ng-content>
+    </ion-card>
+</ion-row>
+</ion-grid>

@@ -1,0 +1,41 @@
+<div dir="{{'ltr' | languageDir }}" layout="row" layout-wrap hide-xs hide-sm>
+  <ion-toolbar style="position:inherit;" color="primary">
+  </ion-toolbar>
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-card style="position:relative;margin-top: -64px;max-width: 840px">
+        <ul class="mdl-stepper mdl-stepper--horizontal">
+          <li *ngFor="let step of stepperSteps" (click)="gotoStep(step.no)" class="mdl-step" [class.is-active]="stepNo == step.no">
+            <span class="mdl-step__label">
+              <span class="mdl-step__title">
+                <span class="mdl-step__title-text">{{ step.title | translate }}</span>
+              </span>
+              <span class="mdl-step__label-indicator">
+                <span class="mdl-step__label-indicator-content">{{ step.no}}</span>
+              </span>
+            </span>
+          </li>
+        </ul>
+        <div class="mdl-step__content" [ngSwitch]="stepNo" flex="100">
+          <div *ngSwitchCase="0">
+          </div>
+          <template-list *ngSwitchCase="1" (selectedTemplate)="templateSelected($event)"></template-list>
+          <personal-info *ngSwitchCase="2" [personalInfo]="version.personalInfo" [showTitle]="false"></personal-info>
+          <section *ngSwitchCase="3" [section]="version.sectionList[0]" [showTitle]="false" [required]="true"></section>
+          <section *ngSwitchCase="4" [section]="version.sectionList[1]" [showTitle]="false" [required]="true"></section>
+          <template-1 *ngSwitchCase = "5" [version]="version"></template-1>
+        </div>
+        <divider></divider>
+        <div class="mdl-step__actions">
+          <button (click)="next()" ion-button small color="secondary">
+              {{ 'Next' | translate }}
+        </button>
+          <button *ngIf="stepNo > 0" class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-cancel>
+              {{ 'Back' | translate }}
+        </button>
+        <a [routerLink]="[{ outlets: { popup: ['resume-template/01'] } }]">{{ 'Preview' | translate }}</a>
+        </div>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+</div>

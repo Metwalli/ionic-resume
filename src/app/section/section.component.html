@@ -1,5 +1,5 @@
 <ion-card>
-      <ion-card-header>
+      <ion-card-header *ngIf="showTitle">
         <!--<div class="remove-section pull-right">
           <span class="icon ion-close-circled" *ngIf="!required" (click)="removeSection()"></span>
         </div> -->
@@ -9,20 +9,20 @@
         <ion-icon [name]="section.icon"></ion-icon>
         {{ section.title | translate }}        
       </ion-card-header>
-      <ion-item-divider color="light"></ion-item-divider>
-      <ion-card-content>      
+      <divider *ngIf="showTitle" color="light"></divider>
+         
         <div [ngSwitch]="section.type">             
-          <!--<language *ngSwitchCase="'language'" [section]="section"></language>       -->
+          <language *ngSwitchCase="'language'" [section]="section"></language>       
           <education *ngSwitchCase="'education'" [section]="section"></education>
-          <!--<experience *ngSwitchCase="'experience'" [section]="section"></experience>
+          <!--<experience *ngSwitchCase="'experience'" [section]="section"></experience>-->
           <skills *ngSwitchCase="'skills'" [section]="section"></skills>
-          <certificate *ngSwitchCase="'certificate'" [section]="section" ></certificate>
+          <!--<certificate *ngSwitchCase="'certificate'" [section]="section" ></certificate>
           <award *ngSwitchCase="'award'" [section]="section" ></award>
           <publication *ngSwitchCase="'publication'" [section]="section" ></publication>
           <reference *ngSwitchCase="'reference'" [section]="section" ></reference>
-          <volunteering *ngSwitchCase="'volunteering'" [section]="section" ></volunteering>
+          <volunteering *ngSwitchCase="'volunteering'" [section]="section" ></volunteering>-->
           <hobbies *ngSwitchCase="'hobbies'" [section]="section"></hobbies>
-          <other-text *ngSwitchCase="'other-text'" [other]="section.itemList"></other-text>-->
+          <!--<other-text *ngSwitchCase="'other-text'" [other]="section.itemList"></other-text>-->
         </div> 
-      </ion-card-content>     
+       
 </ion-card>

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Award} from '../../shared/models/award';
+import {Award} from '../../shared/models';
 import { SectionComponent } from '../section.component';
 
 @Component({  

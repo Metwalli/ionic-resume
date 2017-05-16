@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ResumeVersionComponent } from './resume-version.component';
 import { VersionDetailComponent} from './version-detail/version-detail.component';
 import { VersionListComponent} from './version-list/version-list.component';
-//import { StandardVersionComponent} from './standard-version/standard-version.component';
+import { StandardVersionComponent} from './standard-version/standard-version.component';
 import { AuthGuardService } from '../auth/auth-guard.service';
 
 const routes: Routes = [
@@ -18,12 +18,11 @@ const routes: Routes = [
               //canActivateChild: [AuthGuardService],
               children:[
                 { path: '', component: VersionListComponent },
-                { path: ':id', component: VersionDetailComponent }     
+                { path: ':id', component: StandardVersionComponent, outlet: 'popup', }     
               ]
             }
           ]          
-        },
-        //{ path: 'new', component: StandardVersionComponent},                                               
+        }                                               
     ];
 
 @NgModule({

@@ -1,15 +1,17 @@
 import {Component, OnInit, Input , Output, EventEmitter} from '@angular/core';
-import {Section} from '../shared/models/section';
-import { Award } from '../shared/models/award';
-import { Certificate } from '../shared/models/certificate';
-import { Education } from '../shared/models/education';
-import { Experience } from '../shared/models/experience';
-import { Hobby } from '../shared/models/hobby';
-import { Language } from '../shared/models/language';
-import { Publication } from '../shared/models/publication';
-import { Reference } from '../shared/models/reference';
-import { Skill, SkillCategory } from '../shared/models/skill';
-import { Volunteering } from '../shared/models/volunteering';
+import {
+  Section,
+  Award,
+  Certificate,
+  Education,
+  Experience,
+  Hobby,
+  Language,
+  Publication,
+  Reference,
+  SkillCategory, Skill,
+  Volunteering
+} from '../shared/models';
 
 
 @Component({
@@ -21,7 +23,7 @@ export /**
  * SectionComponent
  */
 class SectionComponent implements OnInit {
-  
+  @Input() showTitle: boolean = true;
   @Input() section: Section;
   @Input() required: boolean = false;
   @Output() removeSectionClick = new EventEmitter<number>();
@@ -97,12 +99,17 @@ class SectionComponent implements OnInit {
 @Component({  
   selector: 'section-template',
   template: `
-  <div class="tooltip" *ngFor="let s of sectionList">
-    <button ion-fab color="light" (click)="selectedSection(s)">
-      <ion-icon [name]="s.icon"></ion-icon>                
-     </button> 
-     <span class="tooltiptext">{{s.title}}</span>
-    </div>
+  <ion-fab top left>
+      <button ion-fab color="secondary"><ion-icon name="add"></ion-icon></button>
+      <ion-fab-list side="bottom">   
+      <div class="tooltip" *ngFor="let s of sectionList">   
+          <span class="tooltiptext">{{ s.title | translate }}</span>  
+          <button ion-fab color="light" (click)="selectedSection(s)">
+            <ion-icon [name]="s.icon"></ion-icon>                                                  
+          </button>           
+        </div>      
+      </ion-fab-list>
+    </ion-fab>
   `,
 styleUrls: ['./section.component.css']
 })

@@ -11,11 +11,11 @@ import { MainTemplateComponent } from './main-template/main-template.component';
     RouterModule.forChild([
         { 
           path: 'resume-template', 
-          component: ResumeTemplateComponent,
+          component: ResumeTemplateComponent,          
           children:[            
             { path: '', component: MainTemplateComponent },
             { path: 'list', component: TemplateListComponent },
-            { path: ':id', component: Template1Component }     
+            { path: ':id', component: Template1Component}     
           ]                    
         }                                       
     ])

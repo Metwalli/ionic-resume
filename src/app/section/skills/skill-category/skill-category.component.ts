@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Skill, SkillCategory } from '../../../shared/models/skill';
+import { Skill, SkillCategory } from '../../../shared/models';
 import { SkillItemComponent } from '../skill-item/skill-item.component';
 import { SectionComponent } from '../../section.component';
 

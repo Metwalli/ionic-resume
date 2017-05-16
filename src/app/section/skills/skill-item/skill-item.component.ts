@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Skill } from '../../../shared/models/skill';
+import { Skill } from '../../../shared/models';
 @Component({
   selector: 'skill-item',
   templateUrl: './skill-item.component.html',

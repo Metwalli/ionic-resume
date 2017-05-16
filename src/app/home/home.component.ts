@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../core/auth.service';
-
+import { AuthService } from '../core/common/services/auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,6 +8,10 @@ import { AuthService } from '../core/auth.service';
 })
 export class HomeComponent  {
   authType: string = 'login';
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router ) { }
+
+  gotoPage(){            
+    this.router.navigate(['/resume-version/list/new']);
+  }
     
 }

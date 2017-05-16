@@ -1,0 +1,10 @@
+ion-card {
+    max-width: 900px;
+    padding: 20px;
+}
+/deep/ label, /deep/ .card-md p {
+    font-size: 1rem;
+}
+/deep/ label {
+    font-weight: bold;
+}

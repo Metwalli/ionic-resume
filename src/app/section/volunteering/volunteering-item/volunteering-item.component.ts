@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Volunteering } from '../../../shared/models/volunteering';
+import { Volunteering } from '../../../shared/models';
 
 @Component({
   selector: 'volunteering-item',

@@ -1,57 +1,70 @@
 
-<div layout="column" layout-padding layout-margin layout-fill >
-    <!--Personal Info-->
-        <div layout="row" flex="100">
-            <div flex="30">                        
+
+        <!--Personal Info-->
+        <ion-row>
+            <ion-col col-3>
                 <img src="images/{{version.personalInfo.image}}" class="img-rounded">
-            </div>
-            <div layout="column" flex="70">
-                <div flex="100">
+            </ion-col>
+            <ion-col col-9>
+                <ion-row>
                     <h1>{{version.personalInfo.fullName}}</h1>
-                </div>                
-                <div layout="row">
-                    <div layout="column" flex="50">
-                        <div layout="row">
-                            <label flex="40">{{ "Date of Birth" | translate }}</label>
-                            <p flex="60">{{version.personalInfo.dob}}</p>
-                        </div>
-                        <div layout="row">
-                            <label flex="40">{{ "Nationality" | translate }}</label>
-                            <p flex="60">{{version.personalInfo.nationality}}</p>
-                        </div>
-                        <div layout="row">
-                            <label flex="40">{{ "Marital Status" | translate }}</label>
-                            <p flex="60">{{version.personalInfo.maritalStatus}}</p>
-                        </div>
-                    </div>                
-                    <div layout="column" flex="50">
-                        <div layout="row">
-                            <label flex="40">{{ "Address" | translate }}</label>
-                            <p flex="60">{{version.personalInfo.address}}</p>
-                        </div>
-                        <div layout="row">
-                            <label flex="40">{{ "Mobile" | translate }}</label>
-                            <p flex="60">{{version.personalInfo.mobile}}</p>
-                        </div>
-                        <div layout="row">
-                            <label flex="40">{{ "Email" | translate }}</label>
-                            <p flex="60">{{version.personalInfo.email}}</p>    
-                        </div>                    
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div layout="column" flex>
-            <div flex>
-                <h3><span class="icon {{version.personalInfo.icon}}"></span>{{ "Profile" | translate }}</h3>
-            </div>
-            <div flex>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-6>
+                        <ion-row>
+                            <ion-col col-4><label>{{ "Date of Birth" | translate }}</label></ion-col>
+                            <ion-col col-8>
+                                <p>{{version.personalInfo.dob}}</p>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col col-4><label>{{ "Nationality" | translate }}</label></ion-col>
+                            <ion-col col-8>
+                                <p>{{version.personalInfo.nationality}}</p>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col col-4><label>{{ "Marital Status" | translate }}</label></ion-col>
+                            <ion-col col-8>
+                                <p>{{version.personalInfo.maritalStatus}}</p>
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+                    <ion-col col-6>
+                        <ion-row>
+                            <ion-col col-4><label>{{ "Address" | translate }}</label></ion-col>
+                            <ion-col col-8>
+                                <p>{{version.personalInfo.address}}</p>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col col-4><label>{{ "Mobile" | translate }}</label></ion-col>
+                            <ion-col col-8>
+                                <p>{{version.personalInfo.mobile}}</p>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col col-4><label>{{ "Email" | translate }}</label></ion-col>
+                            <ion-col col-8>
+                                <p>{{version.personalInfo.email}}</p>
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-row>
+                <h3><ion-icon name="{{version.personalInfo.icon}}"></ion-icon>{{ "Profile" | translate }}</h3>
+            </ion-row>
+            <ion-row>
                 <p>{{version.personalInfo.profile}}</p>
-            </div>
-        </div>
-    
-    <!--Other Section-->
-        <div layout="column" *ngFor="let s of version.sectionList">                    
-            <template-1-section [section]="s"></template-1-section>                        
-        </div>                               
-</div>
+            </ion-row>
+        </ion-row>
+
+        <!--Other Section-->
+        <ion-row *ngFor="let s of version.sectionList">
+            <ion-col col-12>
+                <template-1-section [section]="s"></template-1-section>
+            </ion-col>
+        </ion-row>

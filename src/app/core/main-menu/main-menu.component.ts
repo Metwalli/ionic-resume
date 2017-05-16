@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter , Output} from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../common/common.module';
 
 @Component({
   selector: 'app-main-menu',
@@ -20,6 +20,8 @@ export class MainMenuComponent implements OnInit {
   public goToVersionList() {       
     this.router.navigate(['/resume-version/list']);
   }
-
+  public goToVersionTemplate() {       
+    this.router.navigate([{ outlets: { popup: ['/resume-version/list/new'] } }]);
+  }
 
 }

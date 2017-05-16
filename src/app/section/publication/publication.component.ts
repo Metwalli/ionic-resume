@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Publication} from '../../shared/models/publication';
+import {Publication} from '../../shared/models';
 import { SectionComponent } from '../section.component';
 
 @Component({

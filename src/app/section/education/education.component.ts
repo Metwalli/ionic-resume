@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Education } from '../../shared/models/education';
+import { Education } from '../../shared/models';
 import { SectionComponent } from '../section.component';
 
 @Component({

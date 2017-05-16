@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Reference } from '../../../shared/models/reference';
+import { Reference } from '../../../shared/models';
 
 @Component({
   selector: 'reference-item',

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ResumeVersion } from '../../shared/models/resume-version';
-import {ResumeVersionService} from '../../core/resume-version.service';
+import { ResumeVersion } from '../../shared/models';
+import {ResumeVersionService} from '../../core/common/common.module';
 
 @Component({
   selector: 'template-1',
@@ -9,9 +9,10 @@ import {ResumeVersionService} from '../../core/resume-version.service';
 })
 export class Template1Component implements OnInit {
   @Input() version: ResumeVersion = new ResumeVersion();
+  version1: any;
   constructor(public versionService: ResumeVersionService) { }
 
-  ngOnInit() {
+  ngOnInit() {    
   }
 
 }

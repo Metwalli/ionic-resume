@@ -41,6 +41,14 @@ ul blockquote{
 .section-heading{
 	display: flex;
 }
+ion-fab-list{
+    margin: 60px 0 15px 0;
+}
+.fab-in-list{
+    margin: 2px 0;
+    width: 60px;
+    height: 60px;
+}
 
 /* Tooltip container */
 .tooltip {
@@ -55,6 +63,7 @@ ul blockquote{
     background-color: black;
     color: #fff;
     text-align: center;
+    font-size: 14px;
     padding: 5px 0;
     border-radius: 1px;
  
@@ -71,7 +80,7 @@ ul blockquote{
     top: 15px;
     left: 120%; 
 }
-.tooltip .tooltiptext::before {
+.tooltip .tooltiptext::after {
     content: " ";
     position: absolute;
     top: 50%; /* At the bottom of the tooltip */

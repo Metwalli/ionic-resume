@@ -19,3 +19,40 @@
 		</md-card>	
 	</div>
 </form>-->
+
+<expansion-panel [expanded]="true">
+	<expansion-panel-header>{{ section.name || 'Category Name' | translate }}</expansion-panel-header>
+	<expansion-panel-content>
+		<form #sectionFrm="ngForm">
+			<ion-row>
+				<ion-item>
+					<ion-label floating>{{ 'Category Name' | translate }}</ion-label>
+					<ion-input type="text" required [(ngModel)]="section.name" name="name" #name="ngModel"></ion-input>
+				</ion-item>
+			</ion-row>
+			<ion-card>
+				<ion-card-header>
+					<ion-row class="text-align">
+						<ion-col>
+							{{ 'Name' | translate }}
+						</ion-col>
+						<ion-col>
+							{{ 'Level' | translate }}
+						</ion-col>
+					</ion-row>
+				</ion-card-header>
+				<ion-card-content>
+					<div *ngFor="let itm of section.itemList">
+						<skill-item [item]="itm"></skill-item>
+						<divider></divider>
+					</div>
+				</ion-card-content>
+			</ion-card>
+		</form>
+	</expansion-panel-content>
+	<expansion-panel-footer>
+		<button ion-button small clear color="secondary" (click)="addItem()">
+				{{ 'Add Item' | translate }}
+		</button>
+	</expansion-panel-footer>
+</expansion-panel>

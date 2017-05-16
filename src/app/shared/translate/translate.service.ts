@@ -17,7 +17,7 @@ export class TranslateLanguage{
 
 @Injectable()
 export class TranslateService {
-  private _currentLang: TranslateLanguage = new TranslateLanguage("ar", "عربي" , "ع", "rtl");
+  private _currentLang: TranslateLanguage = new TranslateLanguage("en", "عربي" , "ع", "ltr");
 	public get currentLang() {
 	  return this._currentLang;
 	}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'template-list',
@@ -6,25 +6,107 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./template-list.component.css']
 })
 export class TemplateListComponent implements OnInit {
-
+  selectedIndex: number;
+  @Output() selectedTemplate = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit() {
   }
 
-  templateList: Object[] = [{
+  TemplateClick(index) {
+    let x = this.templateList[index].id;
+    this.selectedTemplate.emit(this.templateList[index].id);
+    this.selectedIndex = index;
+  }
+
+  templateList: any[] = [{
+      id: '01',
       color: 'purple-700',
-      thumpnail: 'library_books',
+      thumpnail: '01.jpg',
       route: 'template-1',
       title: 'Template-1',
     },{
+      id: '02',
       color: 'purple-700',
-      thumpnail: 'library_books',
+      thumpnail: '02.jpg',
       route: 'template-2',
       title: 'Template-2',
     },{
+      id: '03',
       color: 'purple-700',
-      thumpnail: 'library_books',
+      thumpnail: '03.jpg',
+      route: 'template-3',
+      title: 'Template-3',
+    },{
+      id: '01',
+      color: 'purple-700',
+      thumpnail: '04.jpg',
+      route: 'template-2',
+      title: 'Template-2',
+    },{
+      id: '01',
+      color: 'purple-700',
+      thumpnail: '05.jpg',
+      route: 'template-3',
+      title: 'Template-3',
+    },{
+      id: '01',
+      color: 'purple-700',
+      thumpnail: '06.jpg',
+      route: 'template-2',
+      title: 'Template-2',
+    },{
+      id: '01',
+      color: 'purple-700',
+      thumpnail: '07.jpg',
+      route: 'template-3',
+      title: 'Template-3',
+    },{
+      id: '01',
+      color: 'purple-700',
+      thumpnail: '08.jpg',
+      route: 'template-2',
+      title: 'Template-2',
+    },{
+      id: '01',
+      color: 'purple-700',
+      thumpnail: '09.png',
+      route: 'template-3',
+      title: 'Template-3',
+    },{
+      id: '01',
+      color: 'purple-700',
+      thumpnail: '10.png',
+      route: 'template-2',
+      title: 'Template-2',
+    },{
+      id: '01',
+      color: 'purple-700',
+      thumpnail: '11.png',
+      route: 'template-3',
+      title: 'Template-3',
+    },{
+      id: '01',
+      color: 'purple-700',
+      thumpnail: '12.png',
+      route: 'template-2',
+      title: 'Template-2',
+    },{
+      id: '01',
+      color: 'purple-700',
+      thumpnail: '13.png',
+      route: 'template-3',
+      title: 'Template-3',
+    },{
+      id: '01',
+      color: 'purple-700',
+      thumpnail: '14.png',
+      route: 'template-2',
+      title: 'Template-2',
+    },{
+      id: '01',
+      color: 'purple-700',
+      thumpnail: '15.png',
       route: 'template-3',
       title: 'Template-3',
     }

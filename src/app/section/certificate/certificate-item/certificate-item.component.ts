@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Certificate } from '../../../shared/models/certificate';
+import { Certificate } from '../../../shared/models';
 
 @Component({
   selector: 'certificate-item',

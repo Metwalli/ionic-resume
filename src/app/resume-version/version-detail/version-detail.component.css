@@ -1,7 +1,9 @@
-.md-fab-position-bottom-left {
-    position: fixed;
-    bottom: 10px;
+.version-container{
+    background: rgba(211, 211, 211, 0.52);
 }
-ion-fab-list{
-    margin-bottom: 100px;
+.card{
+    max-width: 90%;
+}
+ion-header{
+    position: inherit;
 }

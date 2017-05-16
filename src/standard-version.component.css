@@ -1,0 +1,29 @@
+.mdl-stepper {
+  min-height: 80px;
+  margin: 0;
+}
+
+.mdl-step__label {
+  top: -28px;
+}
+.mdl-step__content {
+  display: block;
+  background: #cccccc;
+  /*padding: 20px;*/
+  margin: 0;
+}
+
+.mdl-step__actions{
+  display: inherit;
+}
+
+
+ion-card, .md-card {
+  min-height: 520px;  
+}
+
+personal-info > ion-card.card-md {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}

@@ -36,13 +36,8 @@
 			</ion-item>
 		</ion-col>    
 	</ion-row>
-  <ion-row>
-    <ion-col col-12>
-			<ion-item>
-				<ion-label floating>{{ 'Description' | translate }}</ion-label>
-				<ion-textarea type="text" [(ngModel)]="item.details" name="details"></ion-textarea>
-			</ion-item>
-		</ion-col> 
-  </ion-row>  	
+  
+	<ion-label>{{ 'Description' | translate }}</ion-label>
+	<quill-editor [(ngModel)]="item.details" name="details"></quill-editor>	
 </form>
 	

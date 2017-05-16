@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Language} from '../../shared/models/language';
+import {Language} from '../../shared/models';
 import { SectionComponent } from '../section.component';
 
 @Component({

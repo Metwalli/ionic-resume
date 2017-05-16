@@ -1,0 +1,137 @@
+<ion-row class="section-header">
+    <h3>
+        <ion-icon name="section.icon"></ion-icon>{{ section.title | translate}}</h3>
+</ion-row>
+<ion-row [ngSwitch]="section.type">
+    <ion-col col-12 *ngSwitchCase="'language'">
+        <ion-row>
+            <ion-col col-6 *ngFor="let itm of section.itemList">
+                <ion-row>
+                    <ion-col col-4>
+                        <label>{{itm.name}}</label>
+                    </ion-col>
+                    <ion-col col-8>
+                        <ion-item>
+                            <ion-range disabled [(ngModel)]="itm.level"></ion-range>
+                        </ion-item>                        
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+    </ion-col>
+
+    <ion-row *ngSwitchCase="'education'">
+        <ion-row *ngFor="let itm of section.itemList">
+            <ion-col col-3>
+                <label> {{itm.dateFrom}}-{{itm.dateTo}} </label>
+            </ion-col>
+            <ion-col col-9>
+                <label>{{itm.name}}</label>
+                <p> {{itm.institute}},{{itm.country}}</p>
+                <p>{{itm.details}}</p>
+            </ion-col>
+        </ion-row>
+    </ion-row>
+
+    <ion-row *ngSwitchCase="'experience'">
+        <ion-row *ngFor="let itm of section.itemList">
+            <ion-col col-3>
+                <label>{{itm.dateFrom}}-{{itm.dateTo}}</label>
+            </ion-col>
+            <ion-col col-9>
+                <label>{{itm.name}}</label>
+                <p>{{itm.company}},{{itm.country}}{{itm.city}}</p>
+                <p>{{itm.details}}</p>
+            </ion-col>
+        </ion-row>
+    </ion-row>
+    <ion-row *ngSwitchCase="'skills'">
+        <ion-col col-6 *ngFor="let c of section.itemList">
+            <ion-row>
+                <label>{{c.name}}</label>
+            </ion-row>
+            <ion-row *ngFor="let itm of c.itemList">
+                <ion-col col-4>
+                    <label> {{itm.name}}</label>
+                </ion-col>
+                <ion-col col-8>
+                    <ion-item>
+                        <ion-range [ngModel]="itm.level"></ion-range>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+        </ion-col>
+    </ion-row>
+    <ion-row *ngSwitchCase="'certificate'">
+        <ion-row *ngFor="let itm of section.itemList">
+            <ion-col col-3>
+                <label> {{itm.issuDate}} </label>
+            </ion-col>
+            <ion-col col-9>
+                <label>{{itm.name}} {{ 'URL' | translate }}: {{itm.url}}</label>
+                <p> {{itm.authority}} </p>
+                <p>{{itm.details}}</p>
+            </ion-col>
+        </ion-row>
+    </ion-row>
+    <ion-row *ngSwitchCase="'award'">
+        <ion-row *ngFor="let itm of section.itemList">
+            <ion-col col-3>
+                <label> {{itm.date}} </label>
+            </ion-col>
+            <ion-col col-9>
+                <label>{{itm.title}} {{ 'URL' | translate }}: <a href="itm.url">{{itm.url}}</a></label>
+                <p> {{itm.presentedBy}} </p>
+                <p>{{itm.details}}</p>
+            </ion-col>
+        </ion-row>
+    </ion-row>
+    <ion-row *ngSwitchCase="'publication'">
+        <ion-row *ngFor="let itm of section.itemList">
+            <ion-col col-3>
+                <label> {{itm.date}} </label>
+            </ion-col>
+            <ion-col col-9>
+                <label>{{itm.name}} {{ 'URL' | translate }}: <a href="itm.url">{{itm.url}}</a></label>
+                <p> {{itm.publisher}} </p>
+                <p>{{itm.details}}</p>
+            </ion-col>
+        </ion-row>
+    </ion-row>
+    <ion-row *ngSwitchCase="'reference'">
+        <ion-row *ngFor="let itm of section.itemList">
+            <ion-row>
+                <ion-col col-6>
+                    <h4> {{itm.name}},{{itm.company}}</h4>
+                </ion-col>
+                <ion-col col-6>
+                    <label>{{itm.email}}</label>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <p>{{itm.details}}</p>
+            </ion-row>
+        </ion-row>
+    </ion-row>
+    <ion-row *ngSwitchCase="'volunteering'">
+        <ion-row *ngFor="let itm of section.itemList">
+            <ion-col col-3>
+                <label> {{itm.dateFrom}}-{{itm.dateTo}} </label>
+            </ion-col>
+            <ion-col col-9>
+                <label>{{itm.name}}, {{itm.role}}</label>
+                <p> {{itm.country}} {{itm.city}}</p>
+                <p>{{itm.details}}</p>
+            </ion-col>
+        </ion-row>
+    </ion-row>
+    <ion-row *ngSwitchCase="'hobby'" layout="row">
+        <ion-col col-2 *ngFor="let itm of section.itemList">
+            <ion-icon name="itm.icon"></ion-icon>
+            <p>{{itm.name}}</p>
+        </ion-col>
+    </ion-row>
+    <ion-row *ngSwitchCase="'other-text'">
+        <p>{{section.itemList}}></p>
+    </ion-row>
+</ion-row>

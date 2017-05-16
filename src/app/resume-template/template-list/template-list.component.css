@@ -1,0 +1,16 @@
+ion-col {
+    padding: 10px;
+}
+ion-card {
+     padding: 5px;
+}
+
+.list-container {
+    overflow: auto;
+    overflow-y: scroll;
+    max-height: 450px;
+}
+
+.template-selected {
+    background: rgba(16, 20, 21, 0.37);
+}

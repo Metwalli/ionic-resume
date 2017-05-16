@@ -9,3 +9,12 @@
 <md-card-actions layout="row">
 	<a md-button (click)="addItem()">{{ 'Add Item' | translate }}</a>
 </md-card-actions>-->
+<ion-card-content>
+<ion-row>
+	<ion-col col-3 *ngFor="let itm of section.itemList">
+		<hobby-item [item]="itm" #hobby></hobby-item>
+	</ion-col>
+</ion-row>
+</ion-card-content>
+<divider></divider>
+<button ion-button small clear color="secondary" (click)="addItem()">{{ 'Add Item' | translate }}</button>

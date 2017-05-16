@@ -1,7 +1,7 @@
 import {Component, OnInit, Input, Output, EventEmitter, AfterViewChecked, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
-import {PersonalInfo} from '../../shared/models/personal-info';
-import { Account } from '../../shared/models/account';
+import {PersonalInfo} from '../../shared/models';
+import { Account } from '../../shared/models';
 
 //import { TranslateComponent, TranslatePipe } from './'
 
@@ -21,6 +21,7 @@ class PersonalInfoComponent implements OnInit, AfterViewChecked {
       {value: 'm', viewValue: 'Male'},
       {value: 'f', viewValue: 'Female'}
     ];
+    @Input() showTitle: boolean = true;
     @Input()personalInfo: PersonalInfo = new PersonalInfo();    
     @ViewChild('form') currentForm: NgForm;
     //@Output() checkFormValidation = new EventEmitter<boolean>();

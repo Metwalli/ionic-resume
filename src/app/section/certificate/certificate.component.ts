@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Certificate} from '../../shared/models/certificate';
+import {Certificate} from '../../shared/models';
 import { SectionComponent } from '../section.component';
 
 @Component({  

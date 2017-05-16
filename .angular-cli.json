@@ -22,9 +22,14 @@
         "theme/variables.scss",
         "theme/mdl.scss",
         "rtl_styles.css",
-        "styles.css"
+        "styles.scss",
+        "lib/stepper.css",
+        "lib/quill.snow.css",
+        "lib/quill.bubble.css"        
       ],
-      "scripts": [],
+      "scripts": [
+        
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

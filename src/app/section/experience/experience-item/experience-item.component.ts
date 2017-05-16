@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Experience } from '../../../shared/models/experience';
+import { Experience } from '../../../shared/models';
 @Component({
   selector: 'experience-item',
   templateUrl: './experience-item.component.html',

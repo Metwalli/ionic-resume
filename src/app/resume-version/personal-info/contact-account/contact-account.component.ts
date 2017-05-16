@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Account } from '../../../shared/models/account';
+import { Account } from '../../../shared/models';
 //import {IconListComponent} from '../../icon/icon-list.component';
 
 @Component({

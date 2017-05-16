@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Hobby } from '../../../shared/models/hobby';
+import { Hobby } from '../../../shared/models';
 @Component({
   selector: 'hobby-item',
   templateUrl: './hobby-item.component.html',

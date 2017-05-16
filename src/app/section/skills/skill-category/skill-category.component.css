@@ -19,3 +19,7 @@ div[after-card] {
 .md-category-card{
     width: 500px;
 }
+
+.text-align ion-col{
+    text-align: center;
+}

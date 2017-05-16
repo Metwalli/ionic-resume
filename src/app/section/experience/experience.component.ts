@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Experience} from '../../shared/models/experience';
+import {Experience} from '../../shared/models';
 import { SectionComponent } from '../section.component';
-//import { Section } from '../../shared/models/section';
+//import { Section } from '../../shared/models';
 @Component({
   
   selector: 'experience',

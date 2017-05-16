@@ -58,7 +58,12 @@ export const AR_TRANSLATION = {
     "Delete": "حذف",
     "Name": "اﻹسم",
     "Login": "تسجيل الدخول",
-    "Sign Up":"تسجيل جديد"
-    
+    "Sign Up":"تسجيل جديد",
+    "Category Name": "إسم المجموعة",
+    "Next": "التالي",
+    "Back": "للخلف",
+    "Select Template": "إختار قالب",
+    "Preview": "معانية",
+    "Select Languge": "إختار اللغة"
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Language } from '../../../shared/models/language';
+import { Language } from '../../../shared/models';
 
 @Component({
   selector: 'language-item',

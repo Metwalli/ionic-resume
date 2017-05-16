@@ -1,7 +1,16 @@
-<div layout="column">
-    <div [ngSwitch]="version.templateID">
-        <template-1 *ngSwitchCase = "'1'" [version]="version" flex="100"></template-1>
-        <!--<template-2 *ngSwitchCase="'2'" [version]="version"></template-2>
-        <template-3 *ngSwitchCase="'3'" [version]="version"></template-3>        -->
-    </div>
-</div>     
+<div dir="{{ 'ltr' | languageDir }}">
+    <ion-grid>
+        <ion-row>
+          <radial-progress></radial-progress>
+        </ion-row>
+        <ion-row justify-content-center>
+            <ion-card [ngSwitch]="version.templateID">
+                <template-1 *ngSwitchCase="'01'" [version]="version1"></template-1>
+                <template-2 *ngSwitchCase="'02'" [version]="version1"></template-2>
+                <template-3 *ngSwitchCase="'03'" [version]="version1"></template-3>
+                <template-4 *ngSwitchCase="'04'" [version]="version1"></template-4>
+                <template-5 *ngSwitchCase="'05'" [version]="version1"></template-5>
+            </ion-card>
+        </ion-row>
+    </ion-grid>
+</div>

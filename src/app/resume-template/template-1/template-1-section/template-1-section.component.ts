@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Section } from '../../../shared/models/section';
+import { Section } from '../../../shared/models';
 
 @Component({
   selector: 'template-1-section',

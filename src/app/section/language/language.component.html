@@ -7,3 +7,12 @@
 <md-card-actions layout="row">
 	<a md-button (click)="addItem()">{{ 'Add Item' | translate }}</a>
 </md-card-actions>-->
+<ion-card-content>
+	<div *ngFor="let itm of section.itemList">
+		<language-item [item]="itm"></language-item>
+	</div>
+</ion-card-content>
+<divider></divider>
+<button ion-button small clear color="secondary" (click)="addItem()">{{ 'Add Item' | translate }}</button>
+
+	

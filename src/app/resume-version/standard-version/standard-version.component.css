@@ -1,0 +1,44 @@
+.mdl-stepper {
+  min-height: 80px;
+  margin: 0;
+}
+
+.mdl-step__label {
+  top: -28px;
+}
+.mdl-step__content {
+  display: block;
+  /*background: #cccccc;*/
+  max-width: 840px;
+  height: inherit;
+  padding: 0;
+  margin: 0;
+  width: 100%
+}
+/deep/ ion-card.card-md {
+  margin: 0;
+  width: 100%
+}
+.mdl-step__actions{
+  display: inherit;
+}
+
+.mdl-step__actions {
+  display: inline;
+}
+
+.mdl-stepper--horizontal .mdl-step__label:active {
+        padding: 0;
+        margin: 0px;
+        /*border-radius: 100%; */
+      }
+
+ion-card, .md-card {
+  /*min-height: 700px;  */
+}
+
+personal-info > ion-card.card-md {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}

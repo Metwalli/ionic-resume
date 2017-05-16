@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../../core/auth.service';
+import { AuthService } from '../../core/common/services/auth.service';
 import { TranslatePipe } from '../../shared/translate/translate.pipe';
 import { TranslateService } from '../../shared/translate/translate.service';
 

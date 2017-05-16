@@ -1,7 +1,26 @@
 <!--<form>
 <div layout="row" layout-align="space-between center">
-  <md-input flex="45" style="max-width: 48%;" placeholder="{{ 'Name' | translate }}" [(ngModel)]="item.name" required name="name" #name="ngModel"></md-input>
+  <md-input flex="45" style="max-width: 48%;" placeholder="" [(ngModel)]="item.name" required name="name" #name="ngModel"></md-input>
   <md-input type="number" max="100" min="0" flex="45" style="max-width: 48%;" placeholder="{{ 'Level' | translate }}" [(ngModel)]="item.level" name="level"></md-input>
 </div>
 </form>
 <md-divider></md-divider>-->
+<ion-card>
+<form>
+  <ion-row>
+    <ion-col col-6>
+      <ion-item>
+        <ion-label floating>{{ 'Name' | translate }}</ion-label>
+        <ion-input type="text" required [(ngModel)]="item.name" name="name" #name="ngModel"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col col-6>
+      <ion-item>
+        <ion-range min="0" max="100" step="10" pin="true" required [(ngModel)]="item.level" name="level">
+                            
+            </ion-range>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</form>
+</ion-card>
