@@ -1,0 +1,33 @@
+.icon-list{
+    direction: inherit;
+    overflow: auto;            
+    width: 250px;
+    overflow-y: hidden; 
+    max-height: 400px;
+    padding: 0;   
+}
+
+ul{
+    list-style: none;
+    display: block;
+}
+.icon-list-item {        
+    font-size:24px;               
+}
+.icon-list li:hover{
+    color: #fff;
+    background-color: #563d7c;
+}
+.icon-list li{
+    width: 25%;
+    font-size:24px;
+    float: left;
+    color: #563d7c;
+    text-align: center;
+    cursor: pointer;
+    min-height: 50px;
+    line-height: 2.2em;
+}
+.dropdown{
+    display: inline;
+}

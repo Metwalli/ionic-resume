@@ -1,0 +1,28 @@
+<div>
+    <ul class="icon-list">
+        <div *ngIf="category == ''">
+            <div *ngFor="let icn of iconList">
+                <li *ngIf="icn.category == 'basic'" (click)="selectedIcon(icn)">
+                    <ion-icon [name]="icn.name"></ion-icon>
+                </li>
+            </div>
+            <divider></divider>
+            <div *ngFor="let icn of iconList">
+                <li *ngIf="icn.category == 'social'" (click)="selectedIcon(icn)">
+                    <ion-icon [name]="icn.name"></ion-icon>
+                </li>
+            </div>
+        </div>
+        <div *ngIf="category != ''">
+            <div *ngFor="let icn of iconList">
+                <li *ngIf="icn.category == category" (click)="selectedIcon(icn)">
+                
+                    
+                    <ion-icon [name]="icn.name"></ion-icon>
+                    
+                
+                </li>
+            </div>
+        </div>
+    </ul>
+</div>
