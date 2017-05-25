@@ -1,4 +1,4 @@
-import { Account } from './account';
+import { ContactAccount } from './contact-account';
 export /**
  * PersonalInfo
  */
@@ -7,7 +7,7 @@ class PersonalInfo {
         
     }
     title: string = "Personal Info";
-	icon: string = ""; 
+	icon: string = "contacts"; 
     firstName: string;
     lastName: string;         
     fullName: string = "";
@@ -22,6 +22,6 @@ class PersonalInfo {
     country: string = "";
     profile: string = "";
     image: string = "";
-    accountList: Account[]=[];
+    accountList: ContactAccount[]=[];
 }
 

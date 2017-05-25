@@ -1,16 +1,19 @@
+
 <details (toggle)="onClick()">
     <summary >
-        <ul>
-            <li class="titleName">
+        <ion-row>
+            <ion-col col-11 class="titleName">
                 <ng-content select="expansion-panel-header"></ng-content>
-            </li>
-            <li>
-                <span>
+            </ion-col>
+            <ion-col col-1>
+                <span>            
+                    <ion-icon *ngIf="showRemove" (click)="onRemoveClick()" name="close"></ion-icon>
+                            
                     <ion-icon *ngIf="expanded" name="arrow-dropup"></ion-icon>
-                    <ion-icon *ngIf="!expanded" name="arrow-dropdown"></ion-icon>
+                    <ion-icon *ngIf="!expanded" name="arrow-dropdown"></ion-icon>                    
                 </span>
-            </li>
-        </ul>
+            </ion-col>
+        </ion-row>
     </summary>
     <div class="content">
         <ng-content select="expansion-panel-content"></ng-content>

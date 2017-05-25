@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../core/common/services/auth.service';
-import { TranslatePipe } from '../../shared/translate/translate.pipe';
-import { TranslateService } from '../../shared/translate/translate.service';
 
 @Component({
   selector: 'login',
@@ -19,8 +17,11 @@ export class LoginComponent implements OnInit {
   submitAttempt: boolean = false;
   public loginError: boolean = false;
 
-  constructor(public authService: AuthService, public router: Router, 
-    public formBuilder: FormBuilder) {
+  constructor(
+    public authService: AuthService, 
+    public router: Router, 
+    public formBuilder: FormBuilder
+  ) {
     this.loginForm = formBuilder.group({
         'email': ['', Validators.compose([Validators.required])],
         'password': ['', Validators.compose([Validators.minLength(6),

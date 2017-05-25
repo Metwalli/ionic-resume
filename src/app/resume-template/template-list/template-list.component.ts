@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'template-list',
@@ -6,17 +6,16 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./template-list.component.css']
 })
 export class TemplateListComponent implements OnInit {
-  selectedIndex: number;
-  @Output() selectedTemplate = new EventEmitter<any>();
+  @Input() currentId: string;
+  @Output() templateClick = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit() {
   }
 
-  TemplateClick(index) {
-    let x = this.templateList[index].id;
-    this.selectedTemplate.emit(this.templateList[index].id);
-    this.selectedIndex = index;
+  selectTemplate(index) {    
+    this.currentId = this.templateList[index].id;
+    this.templateClick.emit(this.currentId);    
   }
 
   templateList: any[] = [{

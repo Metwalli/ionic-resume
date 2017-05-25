@@ -1,17 +1,12 @@
 <ion-card-content>
     <expansion-panel-group #panelGroup>
-        <div *ngFor="let categ of section.itemList">
-
-                <skill-category [section]="categ"></skill-category>
-        </div>
+        <expansion-panel *ngFor="let categ of section.itemList" [expanded]="true" (removeClick)="removeItem($event)">
+			<expansion-panel-header>{{ categ.name || 'Category Name' | translate }}</expansion-panel-header>
+			<expansion-panel-content>
+				<skill-category [section]="categ"></skill-category>
+			</expansion-panel-content>
+		</expansion-panel>        
     </expansion-panel-group>
 </ion-card-content>
 <divider></divider>
-<button ion-button small clear color="secondary" (click)="addItem()">
-    {{ 'Add Category' | translate }}
-</button>
-
-<!--<div *ngFor="let categ of section.itemList">
-        <button ion-fab (click)="removeItem(section.itemList.indexOf(categ))"><md-icon>close</md-icon></button>
-        <skill-category [section]="categ"></skill-category>
-    </div>-->
+<button ion-button small clear color="secondary" (click)="addItem()">{{ 'Add Category' | translate }}</button>

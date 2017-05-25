@@ -6,7 +6,7 @@ import { AngularFire, FirebaseAuthState, AuthProviders, AuthMethods, FirebaseLis
 export class AuthService {
   public user: FirebaseAuthState;
   public redirectUrl: string;
-
+  public authType: string = 'login';
   constructor(
     private af: AngularFire,
     private router: Router
@@ -18,7 +18,7 @@ export class AuthService {
       return this.user
     }, 5000);
   }
-  public signUp(email: string, pwd: string): any{
+  public signUp(email: string, pwd: string): any{    
     return this.af.auth.createUser({email: email, password: pwd});
   }
   public loginByEmail(email: string, pwd: string): any{
@@ -70,6 +70,10 @@ export class AuthService {
         break;
       }
     }    
+  }
+
+  setAuthType(type: string){
+    this.authType = type;
   }
   
   public logout() {

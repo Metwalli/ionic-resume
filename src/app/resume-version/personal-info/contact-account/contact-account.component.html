@@ -1,1 +1,22 @@
-<p> account </p>
+<ion-card>
+    <form>
+        <ion-row>
+            <ion-col align-self-center col-2>
+                <icon-list [category]="'social'" (iconClick)="onChangeIcon($event)"></icon-list>
+                <ion-icon [name]="item.icon"></ion-icon>
+            </ion-col>
+            <ion-col col-5>
+                <ion-item>
+                    <ion-label floating>{{ 'Label' | translate }}</ion-label>
+                    <ion-input type="text" [(ngModel)]="item.label" name="label" #label="ngModel"></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col col-5>
+                <ion-item>
+                    <ion-label floating>{{ 'Address' | translate }}</ion-label>
+                    <ion-input type="text" required [(ngModel)]="item.address" name="address" #address="ngModel"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </form>
+</ion-card>

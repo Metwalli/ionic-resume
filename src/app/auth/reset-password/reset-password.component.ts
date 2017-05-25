@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../core/common/services/auth.service';
-import { TranslatePipe } from '../../shared/translate/translate.pipe';
-import { TranslateService } from '../../shared/translate/translate.service';
 
 @Component({
     selector: 'reset-password',
@@ -17,8 +15,10 @@ export class ResetPasswordComponent implements OnInit {
     passwordChanged: boolean = false;
     submitAttempt: boolean = false;
 
-    constructor(public authService: AuthService, public formBuilder: FormBuilder,
-        public translateService: TranslateService, public router: Router
+    constructor(
+        public authService: AuthService, 
+        public formBuilder: FormBuilder,        
+        public router: Router
     ) {
 
         this.resetPasswordForm = formBuilder.group({

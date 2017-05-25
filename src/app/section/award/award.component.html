@@ -1,8 +1,12 @@
-
-		<!--<button md-icon-button type="button" class="close" (click)="removeItem(section.itemList.indexOf(itm))"><md-icon>close</md-icon></button>-->		
-		<award-item *ngFor="let itm of section.itemList" [item]="itm"></award-item>			
-
-
-<ion-row>
-	<button ion-button (click)="addItem()">{{ 'Add Item' | translate }}</button>
-</ion-row>
+<ion-card-content>
+	<expansion-panel-group #panelGroup>
+		<expansion-panel *ngFor="let itm of section.itemList" [expanded]="true">
+			<expansion-panel-header>{{ itm.name || 'Award' | translate }}</expansion-panel-header>
+			<expansion-panel-content>
+				<award-item [item]="itm"></award-item>
+			</expansion-panel-content>
+		</expansion-panel>
+	</expansion-panel-group>
+</ion-card-content>
+<divider></divider>
+<button ion-button small clear color="secondary" (click)="addItem()">{{ 'Add Item' | translate }}</button>

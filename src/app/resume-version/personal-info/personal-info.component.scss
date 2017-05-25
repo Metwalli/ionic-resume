@@ -19,9 +19,13 @@
     // transform: translateY(0%);
 }
 
-ion-row {
-    max-height: 80px;
+.other-row {
+    max-height: inherit;
 }
 ion-item.item-md {
     margin-bottom: 15px;
+}
+
+expansion-panel-group, contact-account {
+    width: 100%;
 }

@@ -8,9 +8,13 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent  {
   authType: string = 'login';
-  constructor(private authService: AuthService, private router: Router ) { }
+  constructor(
+    private authService: AuthService, 
+    private router: Router
+  ) { }
 
-  gotoPage(){            
+  gotoPage(){      
+    this.authType = 'sign-up';      
     this.router.navigate(['/resume-version/list/new']);
   }
     

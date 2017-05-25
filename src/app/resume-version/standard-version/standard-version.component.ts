@@ -83,11 +83,11 @@ export class StandardVersionComponent implements OnInit {
         this.stepNo = no;
       }
     }
-    previous(){
+    back(){
       this.stepNo--;
     }
     preview(){
-      this.stepNo++;
+      //this.stepNo++;
       // this._versionService.currentVersion = this.version;
       // this.router.navigate(['resume-template']);
     }
@@ -99,7 +99,7 @@ export class StandardVersionComponent implements OnInit {
         this._versionService.addVersion(this.version);             
     }
 
-    templateSelected(templateID : string) {            
+    selectTemplate(templateID : string) {            
       this.version.templateID = templateID;
     }
     

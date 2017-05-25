@@ -7,3 +7,15 @@
 ion-header{
     position: inherit;
 }
+.menu-list {    
+    box-shadow: -4px 8px 6px rgba(0,0,0,0.24);
+}
+.menu-list ion-list {
+    width: 24%;
+    position: fixed;
+    overflow: auto;
+}
+.section-template {
+    position: fixed;
+    top: 60px;
+}

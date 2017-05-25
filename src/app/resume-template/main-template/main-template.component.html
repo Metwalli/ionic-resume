@@ -1,8 +1,5 @@
 <div dir="{{ 'ltr' | languageDir }}">
-    <ion-grid>
-        <ion-row>
-          <radial-progress></radial-progress>
-        </ion-row>
+    <ion-grid>        
         <ion-row justify-content-center>
             <ion-card [ngSwitch]="version.templateID">
                 <template-1 *ngSwitchCase="'01'" [version]="version1"></template-1>

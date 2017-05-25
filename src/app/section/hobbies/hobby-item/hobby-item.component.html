@@ -1,14 +1,14 @@
 <form #sectionFrm="ngForm">
 	<ion-card>
 		<ion-card-header>
-			<ion-icon name="{{item.icon}}"></ion-icon>
+			<ion-icon [name]="item.icon"></ion-icon>
 		</ion-card-header>
 		<ion-card-content>
 			<ion-item>
 				<ion-label floating>{{ 'Name' | translate }}</ion-label>
 				<ion-input type="text" required [(ngModel)]="item.name" name="name" #name="ngModel"></ion-input>
 			</ion-item>
-			<!--<icon-list class="icon-list" [icon]="item.icon" (onChangeIcon)="onChangeIcon($event)"></icon-list>-->
+			<icon-list (iconClick)="onChangeIcon($event)"></icon-list>
 		</ion-card-content>
 	</ion-card>
 </form>

@@ -1,10 +1,26 @@
-  <nav class="mdl-navigation">
-    <a class="mdl-navigation__link" #editUserButton1 *ngIf="!authService.user" (click)="authType='sign-up';editUserDialog.show()">تسجيل جديد</a>
-    <a class="mdl-navigation__link" #editUserButton2 *ngIf="!authService.user" (click)="authType='login';editUserDialog.show()">تسجيل دخول</a>
-    <a class="mdl-navigation__link" *ngIf="authService.user" routerLink="/resume-version">Dashboard</a>
-    <a class="mdl-navigation__link" *ngIf="authService.user" (click)="authService.logout()">LogOut</a>
-    <a class="mdl-navigation__link" href="">عنا</a>
-  </nav>  
-  <mdl-layout-title class="android-title">
-    <a href="#">سيرتي</a>
-  </mdl-layout-title>
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item >
+        Home
+      </button>
+      
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav id="nav" #content></ion-nav>
+<!--<nav class="mdl-navigation">
+  <a class="mdl-navigation__link" #editUserButton1 *ngIf="!authService.user" (click)="authType='sign-up';editUserDialog.show()">تسجيل جديد</a>
+  <a class="mdl-navigation__link" #editUserButton2 *ngIf="!authService.user" (click)="authType='login';editUserDialog.show()">تسجيل دخول</a>
+  <a class="mdl-navigation__link" *ngIf="authService.user" routerLink="/resume-version">Dashboard</a>
+  <a class="mdl-navigation__link" *ngIf="authService.user" (click)="authService.logout()">LogOut</a>
+  <a class="mdl-navigation__link" href="">عنا</a>
+</nav>
+<mdl-layout-title class="android-title">
+  <a href="#">سيرتي</a>
+</mdl-layout-title>-->

@@ -8,12 +8,13 @@
 }
 .mdl-step__content {
   display: block;
-  /*background: #cccccc;*/
+  overflow: auto;
   max-width: 840px;
-  height: inherit;
+  max-height: 500px;
+  min-height: 500px;
   padding: 0;
   margin: 0;
-  width: 100%
+  width: 100%;  
 }
 /deep/ ion-card.card-md {
   margin: 0;

@@ -1,17 +1,48 @@
-<!--<form #sectionFrm = "ngForm" >
-		<div layout="row" layout-align="space-between center">
-			<md-input flex="45" style="max-width: 48%;" placeholder="{{ 'NGO' | translate }}" [(ngModel)]="item.name" required name="name" #name="ngModel"></md-input>
-      <md-input flex="45" style="max-width: 48%;" placeholder="{{ 'Role' | translate }}" [(ngModel)]="item.role" name="role"></md-input>
-		</div>
-		<div layout="row" layout-align="space-between center">
-			<md-input flex="45" style="max-width: 48%;" placeholder="{{ 'Country' | translate }}" [(ngModel)]="item.country" name="country"></md-input>
-      <md-input flex="45" style="max-width: 48%;" placeholder="{{ 'City' | translate }}" [(ngModel)]="item.city" name="city"></md-input>
-		</div>	
-    <div layout="row" layout-align="space-between center">
-			<md-input flex="45" style="max-width: 48%;" type="date" placeholder="{{ 'From' | translate }}" [(ngModel)]="item.dateFrom" name="dateFrom"></md-input>
-      <md-input flex="45" style="max-width: 48%;" type="date" placeholder="{{ 'To' | translate }}" [(ngModel)]="item.dateTo" name="dateTo"></md-input>
-		</div>			
-    <div layout="row" layout-align="space-between center">		
-			<md-textarea flex="100" rows="3" placeholder="{{ 'Details' | translate }}" [(ngModel)]="item.details" name="details"></md-textarea>
-		</div>
-</form>-->
+<form #sectionFrm="ngForm">
+	<ion-row>
+		<ion-col col-6>
+			<ion-item>
+				<ion-label floating>{{ 'NGO' | translate }}</ion-label>
+				<ion-input type="text" required [(ngModel)]="item.name" name="name" #name="ngModel"></ion-input>
+			</ion-item>
+		</ion-col>
+		<ion-col col-6>
+			<ion-item>
+				<ion-label floating>{{ 'Role' | translate }}</ion-label>
+				<ion-input type="text" required [(ngModel)]="item.role" name="role" #role="ngModel"></ion-input>
+			</ion-item>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col col-6>
+			<ion-item>
+				<ion-label floating>{{ 'Country' | translate }}</ion-label>
+				<ion-input type="text" [(ngModel)]="item.country" name="country"></ion-input>
+			</ion-item>
+		</ion-col>
+		<ion-col col-6>
+			<ion-item>
+				<ion-label floating>{{ 'City' | translate }}</ion-label>
+				<ion-input type="text" [(ngModel)]="item.city" name="city"></ion-input>
+			</ion-item>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col col-6>
+			<ion-item>
+				<ion-label floating>{{ 'From' | translate }}</ion-label>
+				<ion-input type="date" [(ngModel)]="item.dateFrom" name="dateFrom"></ion-input>
+			</ion-item>
+		</ion-col>
+		<ion-col col-6>
+			<ion-item>
+				<ion-label floating>{{ 'To' | translate }}</ion-label>
+				<ion-input type="date" [(ngModel)]="item.dateTo" name="dateTo"></ion-input>
+			</ion-item>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-label>{{ 'Details' | translate }}</ion-label>
+		<quill-editor [(ngModel)]="item.details" name="details"></quill-editor>
+	</ion-row>
+</form>

@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../core/common/services/auth.service';
-import { TranslatePipe } from '../shared/translate/translate.pipe';
-import { TranslateService } from '../shared/translate/translate.service';
 
 @Component({
   selector: 'app-auth',
@@ -15,8 +13,9 @@ export class AuthComponent implements OnInit {
   constructor(
     public authService: AuthService, 
     public router: Router, 
-    public translateService: TranslateService
+    public route: ActivatedRoute    
     ) {
+      this.authType = this.authService.authType;
   }
   ngOnInit(){
     setTimeout( ()=>{      
@@ -25,6 +24,7 @@ export class AuthComponent implements OnInit {
         this.router.navigate([url]);
       }
     },1000);
+    this.authType = this.authService.authType;
   }
 
   login(provider: string){

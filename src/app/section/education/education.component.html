@@ -1,30 +1,12 @@
-<!--<expansion-panel-group #panelGroup>
-		<expansion-panel *ngFor="let itm of section.itemList">
-			<expansion-panel-header>
-				{{itm.name}}
-			</expansion-panel-header>
+<ion-card-content>
+	<expansion-panel-group #panelGroup>
+		<expansion-panel *ngFor="let itm of section.itemList" [title]="itm.name" [expanded]="true" (removeClick)="removeItem(section.itemList.indexOf(itm))">
+			<expansion-panel-header>{{ itm.name || 'Degree' | translate }}</expansion-panel-header>
 			<expansion-panel-content>
-				
-					<education-item [item]="itm"></education-item>
-				
+				<education-item [item]="itm"></education-item>
 			</expansion-panel-content>
 		</expansion-panel>
 	</expansion-panel-group>
-<ion-item-divider color="light"></ion-item-divider>
-<ion-row>
-	<ion-col>
-		<button ion-button color="secondary" (click)="addItem()">{{ 'Add Item' | translate }}</button>
-	</ion-col>
-</ion-row>-->
- <ion-card-content>  
-<expansion-panel-group #panelGroup>
-	<expansion-panel *ngFor="let itm of section.itemList" [title]="itm.name" [expanded]="true">
-		<expansion-panel-header>{{ itm.name || 'Degree' | translate }}</expansion-panel-header>
-		<expansion-panel-content>
-			<education-item [item]="itm"></education-item>
-		</expansion-panel-content>
-	</expansion-panel>
-</expansion-panel-group>
- </ion-card-content>
+</ion-card-content>
 <divider></divider>
 <button ion-button small clear color="secondary" (click)="addItem()">{{ 'Add Item' | translate }}</button>

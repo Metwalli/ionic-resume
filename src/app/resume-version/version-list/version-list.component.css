@@ -27,3 +27,14 @@
 div[after-card] {
     margin: 64px 8px 8px 8px;
 }
+
+.version-action {
+    display: none;
+    height: 60px;
+}
+
+.version-card:hover .version-action{
+    display: flex;
+
+}
+

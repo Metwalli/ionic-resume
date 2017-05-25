@@ -3,13 +3,13 @@
             box-sizing: inherit;
         }
 
-        ul, ol {
+        ion-row, ion-col {
             margin: 0;
             padding: 0;
         }
         
         div.panel{
-            max-width: 95%;            
+            max-width: 100%;            
             margin-top: 10px;
             // margin-top: calc(5% - 0px);
         }
@@ -71,7 +71,7 @@
              flex: 1 100%;
              flex-flow: row wrap;
         }
-        summary ul li span{
+        span{
               display: block;
               font-size: 15px;
               margin-top: 6px;

@@ -15,11 +15,15 @@ export class SignUpComponent implements OnInit {
     passwordChanged: boolean = false;
     submitAttempt: boolean = false;
     signupError: boolean = false;
-    constructor(public authService: AuthService, public router: Router,
-                public formBuilder: FormBuilder) {
+    constructor(
+      public authService: AuthService, 
+      public router: Router,
+      public formBuilder: FormBuilder
+    ) {
       this.signupForm = formBuilder.group({
         'email': ['', Validators.compose([Validators.required])],
-        'password': ['', Validators.compose([Validators.minLength(6), Validators.required])]
+        'password': ['', Validators.compose([Validators.minLength(6), Validators.required])],
+        'confirmPassword': ['', Validators.compose([Validators.minLength(6), Validators.required])]
       });
     }
 
@@ -30,7 +34,7 @@ export class SignUpComponent implements OnInit {
     signup(){
         this.submitAttempt = true;
 
-        if (!this.signupForm.valid){
+        if (!this.signupForm.valid || this.signupForm.value.confirmPassword != this.signupForm.value.password ){
             this.signupError = true;
         } else {
             this.authService.signUp(this.signupForm.value.email, 

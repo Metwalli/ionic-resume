@@ -1,19 +1,22 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { SectionComponent } from '../section.component';
 
 @Component({
-  
+
   selector: 'other-text',
   template: `   
   <ion-card-content>
-    <ion-row>		
-			<!--< flex="100" rows="7" placeholder="{{ 'Other' | translate }}" [(ngModel)]="other" name="other"></md-textarea>-->
-		</ion-row>
+    <form>
+      <ion-row>        
+        <quill-editor [(ngModel)]="otherText" name="otherText"></quill-editor>
+      </ion-row>
+    </form>
   </ion-card-content>
   `,
-  
+
 })
 
-export class OtherTextComponent{  
-  @Input() other: string;
-  constructor(){}
+export class OtherTextComponent {
+  @Input() otherText: string = "";
+  constructor() {  }
 }

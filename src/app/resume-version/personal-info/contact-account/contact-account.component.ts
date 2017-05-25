@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Account } from '../../../shared/models';
+import { ContactAccount } from '../../../shared/models';
 //import {IconListComponent} from '../../icon/icon-list.component';
 
 @Component({
@@ -8,14 +8,18 @@ import { Account } from '../../../shared/models';
   styleUrls: ['./contact-account.component.css']
 })
 export class ContactAccountComponent implements OnInit {
-  @Input() item: Account = new Account();
+  @Input() item: ContactAccount = new ContactAccount();
   constructor(
     ){  }  
   ngOnInit(){
          
   }
   
-  onChangeIcon(icn: string){
-      this.item.icon = icn;
+  onChangeIcon(icon: string){    
+    if(icon != null){      
+      if( icon == 'none'){
+        this.item.icon = "";
+      }else this.item.icon = icon;
+    }      
   }  
 }

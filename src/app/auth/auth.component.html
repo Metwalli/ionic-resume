@@ -1,36 +1,30 @@
-<div [dir]="translateService.getDir()">
-    <ion-card>
-            <ion-toolbar color="secondary">
-                <h3 class="mdl-dialog__title">{{title | translate }}</h3>
-            </ion-toolbar>
-        <ion-card-content>
-            <ion-grid>
-                <ion-row>
-                    <ion-col col-5>
-                        <div [ngSwitch]="authType">
-                            <login *ngSwitchCase="'login'"></login>
-                            <sign-up *ngSwitchCase="'sign-up'"></sign-up>
-                        </div>
-                    </ion-col>
-                    <ion-col col-1>
-                        <div class="seperator-flex">
-                            <div class="or">أو</div>
-                        </div>
-                    </ion-col>
-                    <ion-col col-6>
-                        <button class="social-signin facebook" (click)="login('facebook')">فيسبوك <i class="fa fa-facebook" aria-hidden="true"></i></button>
-                        <button ion-button class="social-signin twitter" (click)="login('twitter')">تويتر &nbsp; &nbsp;&nbsp;&nbsp;<i class="fa fa-twitter" aria-hidden="true"></i></button>
-                        <button ion-button class="social-signin google" (click)="login('google')">جوجل &nbsp;<i class="fa fa-google-plus" aria-hidden="true"></i></button>
-                    </ion-col>
-                </ion-row>
-                <ion-row>
-                    <div class="mdl-dialog__content reg-with-us">
-                        <p>
-                            لا يقوم الموقع بمشاركة بياناتك مع أي طرف اخر بدون اذنك. لتفاصيل أكثر يرجى الاطلاع على سياسة الخصوصية للموقع.
-                        </p>
+<card-over>
+    <card-over-content>
+        <div dir="{{'ltr' | languageDir }}">
+            <ion-row justify-content-center>
+                <ion-col col-5 align-self-center>
+                    <div [ngSwitch]="authService.authType">
+                        <login *ngSwitchCase="'login'"></login>
+                        <sign-up *ngSwitchCase="'sign-up'"></sign-up>
                     </div>
-                </ion-row>
-            </ion-grid>
-        </ion-card-content>
-    </ion-card>
-</div>
+                </ion-col>
+                <ion-col col-1 align-self-center>
+                    <div class="or">أو</div>
+                </ion-col>
+                <ion-col col-5 align-self-center>
+                    <button class="social-signin facebook" (click)="login('facebook')">{{ 'Facebook' | translate }}<i class="fa fa-facebook" aria-hidden="true"></i></button>
+                    <button ion-button class="social-signin twitter" (click)="login('twitter')"> {{ 'Twitter' | translate }}<i class="fa fa-twitter" aria-hidden="true"></i></button>
+                    <button ion-button class="social-signin google" (click)="login('google')">{{ 'Google' | translate }}<i class="fa fa-google-plus" aria-hidden="true"></i></button>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <div class="mdl-dialog__content reg-with-us">
+                    <p>
+                        لا يقوم الموقع بمشاركة بياناتك مع أي طرف اخر بدون اذنك. لتفاصيل أكثر يرجى الاطلاع على سياسة الخصوصية للموقع.
+                    </p>
+                </div>
+            </ion-row>
+        </div>
+    </card-over-content>
+</card-over>

@@ -3,8 +3,9 @@ export class Reference {
     
   }
   name: string;
-  company: string;  
+  company: string; 
+  country: string; 
+  mobile: string;  
   email: string;
-  mobile: string;    
-  details: string;
+  address: string;
 }

@@ -15,7 +15,7 @@ import { ResumeVersionResolve } from './common/services/resume-version-resolve.s
 import { AuthService } from './common/services/auth.service';
 
 //import { HeaderComponent } from './header/header.component';
-//import { AppDrawerComponent } from './app-drawer/app-drawer.component';
+import { AppDrawerComponent } from './app-drawer/app-drawer.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { AppTitleComponent } from './app-title/app-title.component';
 
@@ -41,7 +41,7 @@ const myFirebaseAuthConfig = {
   exports:[ 
     //ResumeCommonModule,
     //CovalentStepsModule,    
-    AppTitleComponent, 
+    AppTitleComponent,     
     MainMenuComponent
   ],
   providers: [

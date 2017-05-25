@@ -8,13 +8,6 @@ ul blockquote{
 .col-md-12 h3{
 	--border-bottom: 2px solid #31A3DD;
 }
-.dl-horizontal dt{
-	text-align: left;
-	width: 120px;
-}
-.dl-horizontal dd{
-	margin-left: 14px;
-}
 .ng-invalid .ng-dirty {
  border-color: #FA787E;
 }
@@ -35,12 +28,10 @@ ul blockquote{
 	font-size: 24px;
 	display: inline-block;
 }
-.remove-section span:hover{
+.remove-section ion-icon:hover{
 	color: red;
 }
-.section-heading{
-	display: flex;
-}
+
 ion-fab-list{
     margin: 60px 0 15px 0;
 }

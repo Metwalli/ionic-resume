@@ -1,43 +1,42 @@
-
-<form #sectionFrm = "ngForm">
-  <ion-row>
+<form #sectionFrm="ngForm">
+	<ion-row>
 		<ion-col col-12>
 			<ion-item>
 				<ion-label floating>{{ 'Degree' | translate }}</ion-label>
 				<ion-input type="text" required [(ngModel)]="item.name" name="name" #name="ngModel"></ion-input>
 			</ion-item>
 		</ion-col>
-  </ion-row>
-  <ion-row>
+	</ion-row>
+	<ion-row>
 		<ion-col col-6>
 			<ion-item>
 				<ion-label floating>{{ 'Institute' | translate }}</ion-label>
 				<ion-input type="text" [(ngModel)]="item.institute" name="institute"></ion-input>
 			</ion-item>
 		</ion-col>
-    <ion-col col-6>
+		<ion-col col-6>
 			<ion-item>
 				<ion-label floating>{{ 'Country' | translate }}</ion-label>
 				<ion-input type="text" [(ngModel)]="item.country" name="country"></ion-input>
 			</ion-item>
 		</ion-col>
 	</ion-row>
-  <ion-row>
+	<ion-row>
 		<ion-col col-6>
 			<ion-item>
 				<ion-label floating>{{ 'From' | translate }}</ion-label>
-				<ion-input type="text" [(ngModel)]="item.dateFrom" name="dateFrom"></ion-input>
+				<ion-input type="date" [(ngModel)]="item.dateFrom" name="dateFrom"></ion-input>
 			</ion-item>
 		</ion-col>
-    <ion-col col-6>
+		<ion-col col-6>
 			<ion-item>
 				<ion-label floating>{{ 'To' | translate }}</ion-label>
-				<ion-input type="text" [(ngModel)]="item.dateTo" name="dateTo"></ion-input>
+				<ion-input type="date" [(ngModel)]="item.dateTo" name="dateTo"></ion-input>
 			</ion-item>
-		</ion-col>    
+		</ion-col>
 	</ion-row>
-  
-	<ion-label>{{ 'Description' | translate }}</ion-label>
-	<quill-editor [(ngModel)]="item.details" name="details"></quill-editor>	
+	<ion-row>
+		<ion-label>{{ 'Description' | translate }}</ion-label>
+		<quill-editor [(ngModel)]="item.details" name="details"></quill-editor>
+	</ion-row>
 </form>
-	

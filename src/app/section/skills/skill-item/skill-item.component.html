@@ -1,24 +1,15 @@
-<!--<form>
-  <div layout="row" layout-align="space-between center">
-    <md-input flex="65" style="max-width: 68%;" placeholder="{{ 'Name' | translate }}" [(ngModel)]="item.name" required name="name" #name="ngModel"></md-input>
-    <md-input type="number" max="100" min="0" flex="25" style="max-width: 28%;" placeholder="{{ 'Level' | translate }}" [(ngModel)]="item.level" name="level"></md-input>
-  </div>
+<form>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'Name' | translate }}" required [(ngModel)]="item.name" name="name" #name="ngModel"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <ion-range min="0" max="100" step="10" pin="true" required [(ngModel)]="item.level" name="level">
+        </ion-range>
+      </ion-item>
+    </ion-col>
+  </ion-row>
 </form>
-<md-divider></md-divider>-->
-
-
-  <form>
-    <ion-row flex>
-      <ion-col>
-        <ion-item>        
-          <ion-input type="text" placeholder="{{ 'Name' | translate }}" required [(ngModel)]="item.name" name="name" #name="ngModel"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col>
-        <ion-item>
-          <ion-range min="0" max="100" step="10" pin="true" required [(ngModel)]="item.level" name="level">
-          </ion-range>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-  </form>

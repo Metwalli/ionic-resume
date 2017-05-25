@@ -6,6 +6,7 @@ import { ResumeTemplateModule } from '../resume-template/resume-template.module'
 
 import { ResumeVersionRoutingModule } from './resume-version.routing.module';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
+import { ContactAccountComponent } from './personal-info/contact-account/contact-account.component';
 import { ResumeVersionComponent } from './resume-version.component';
 import { VersionDetailComponent } from './version-detail/version-detail.component';
 import { VersionListComponent } from './version-list/version-list.component';
@@ -24,6 +25,7 @@ import { StandardVersionComponent } from './standard-version/standard-version.co
     VersionDetailComponent, 
     VersionListComponent,
     PersonalInfoComponent, 
+    ContactAccountComponent,
     StandardVersionComponent        
   ],
   providers: [ ResumeVersionRoutingModule ],

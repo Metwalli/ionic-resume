@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { ModalController, Platform, NavParams, ViewController } from 'ionic-angular';
 //import { AuthComponent } from './auth/auth.component';
 @Component({
@@ -11,8 +12,12 @@ export class AppComponent {
   authType: string = 'login';  
   @ViewChild('editUserDialog') dialog: any;
   constructor(
-    public modalCtrl: ModalController
+    public modalCtrl: ModalController,
+    private router: Router
     ) { }  
+  goToAuth(at: string){
+    this.router.navigate(['/auth']);
+  }
   showDialog(at: string){
     this.authType= at;
     let modal = this.modalCtrl.create(ModalContentPage,{authType: this.authType});

@@ -1,13 +1,15 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-  
+
   <div class="android-content mdl-layout__content">
     <a name="top"></a>
     <div class="android-be-together-section mdl-typography--text-center">
-      <div class="logo-font android-slogan">ابن سيرتك الذاتية معنا واصنع فرصتك</div>
-      <div class="logo-font android-sub-slogan">العملية سهلة... <button #editUserButton mdl-button mdl-button-type="raised" class="mdl-button--colored" mdl-ripple
-          (click)="authType='sign-up';gotoPage();">ابدأ الان</button></div>
-
+      <div class="logo-font android-slogan">{{ 'Build your CV with us, and get your chance' | translate }}</div>
+      <div class="logo-font android-sub-slogan">{{ 'It is Easy' | translate }}
+        <button mdl-button-type="raised" class="mdl-button--colored" mdl-ripple (click)="gotoPage()">
+          {{ 'Start Now' | translate }}
+        </button>
+      </div>
       <div class="logo-font android-create-character">
 
       </div>
@@ -18,10 +20,10 @@
             </button>
       </a>
     </div>
-  
+
     <div class="android-screen-section mdl-typography--text-center">
       <a name="screens"></a>
-      <div class="mdl-typography--display-1-color-contrast">قوالب احترافية مخصصة بحسب مجال العمل</div>
+      <div class="mdl-typography--display-1-color-contrast">{{ 'Profissional Template, Customizing in work field' | translate }}</div>
       <div class="android-screens">
         <div class="android-screen">
           <a class="android-image-link" href="">
@@ -51,17 +53,17 @@
       </div>
     </div>
     <div class="android-more-section">
-      <div class="android-section-title mdl-typography--display-1-color-contrast">تستطيع أيضا</div>
+      <div class="android-section-title mdl-typography--display-1-color-contrast">{{ 'And You Can' | translate }}</div>
       <div class="android-card-container mdl-grid">
         <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
           <div class="mdl-card__media">
             <img src="../../assets/images/more-from-1.png">
           </div>
           <div class="mdl-card__title">
-            <h4 class="mdl-card__title-text">اكثر من سيرة ذاتية بحسب التخصص</h4>
+            <h4 class="mdl-card__title-text">{{ 'Additiona CV Depending on Speciality' | translate }}</h4>
           </div>
           <div class="mdl-card__supporting-text">
-            <span class="mdl-typography--font-light mdl-typography--subhead">يمكنك بناءأكثر من سيرة ذاتية بحسب التخصص أو الوظيفة المقدم عليها</span>
+            <span class="mdl-typography--font-light mdl-typography--subhead">{{ 'You Can Build Additional Version regarding on Speciality or Job' | translate }}</span>
           </div>
           <div class="mdl-card__actions">
             <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
@@ -76,10 +78,10 @@
             <img src="../../assets/images/more-from-4.png">
           </div>
           <div class="mdl-card__title">
-            <h4 class="mdl-card__title-text">طباعة سيرتك الذاتية بأي شكل تريد</h4>
+            <h4 class="mdl-card__title-text">{{ 'Print Your CV in Proffisional Template' | translate }}</h4>
           </div>
           <div class="mdl-card__supporting-text">
-            <span class="mdl-typography--font-light mdl-typography--subhead">مع مجموعة القوالب المتنوعة يمكنك اختيار القالب المناسب للسيرة الذاتية الخاصة بك وارسالها بالبريد الالكتروني أو طباعتها</span>
+            <span class="mdl-typography--font-light mdl-typography--subhead">{{ 'We Provide more Templates' | translate }}</span>
           </div>
           <div class="mdl-card__actions">
             <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
@@ -94,12 +96,10 @@
             <img src="../../assets/images/more-from-2.png">
           </div>
           <div class="mdl-card__title">
-            <h4 class="mdl-card__title-text">دعم اللغة العربية والانجليزية</h4>
+            <h4 class="mdl-card__title-text">{{ 'Supporting Arabic and English Versions' | translate}}</h4>
           </div>
           <div class="mdl-card__supporting-text">
-            <span class="mdl-typography--font-light mdl-typography--subhead">يمكنك بناء السيرة الذاتية الخاصة بك
-                  باللغة العربية أو الانجليزية كما يمكن للسيرة الذاتية أن تكون باللغتين معا
-                </span>
+            <span class="mdl-typography--font-light mdl-typography--subhead">{{ 'You Can Build Your CV In Arabic Or English' | translate }}</span>
           </div>
           <div class="mdl-card__actions">
             <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
@@ -114,12 +114,10 @@
             <img src="../../assets/images/more-from-3.png">
           </div>
           <div class="mdl-card__title">
-            <h4 class="mdl-card__title-text">الحصول على المساعدة</h4>
+            <h4 class="mdl-card__title-text">{{ 'Getting Advise' | translate}}</h4>
           </div>
           <div class="mdl-card__supporting-text">
-            <span class="mdl-typography--font-light mdl-typography--subhead">من خلال المدونة الخاصة بسيرتي يمكنك الحصول
-                  على النصائح والتوجيهات اللازمة لبناء سيرتك الذاتية بشكل احترافي.
-                </span>
+            <span class="mdl-typography--font-light mdl-typography--subhead">{{ 'Via Seraty You Can Getting More Advise to Build Proffisional CV' | translate }}</span>
           </div>
           <div class="mdl-card__actions">
             <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
@@ -178,7 +176,7 @@
 
     </footer>
   </div>
- 
+
 </div>
 
 <!-- The script that is used to implement full screen dialog-->

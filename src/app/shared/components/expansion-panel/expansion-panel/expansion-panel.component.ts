@@ -66,8 +66,10 @@ export class ExpansionPanelComponent implements OnInit {
   isExpanded: boolean = false;
   details: any;
   @Input() title: string; 
-  @Input() expanded: boolean = false; 
+  @Input() expanded: boolean = false;
+  @Input() showRemove: boolean = true; 
   @Output() onChange = new EventEmitter<boolean>();
+  @Output() removeClick = new EventEmitter<number>();
   constructor(private _elementRef: ElementRef) { }
 
   ngOnInit() { 
@@ -75,7 +77,6 @@ export class ExpansionPanelComponent implements OnInit {
     this.details.open = this.expanded;
    }
   onClick(){    
-   
     this.expanded = this.details.open;
     this.onChange.emit(this.expanded);
   }  
@@ -88,7 +89,11 @@ export class ExpansionPanelComponent implements OnInit {
   collapse() {
     this.details.open = false;
     this.expanded = false;
-  }    
+  }   
+
+  onRemoveClick() {
+    this.removeClick.emit();
+  } 
 }
 
 @Component({

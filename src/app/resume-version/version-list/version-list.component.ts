@@ -5,9 +5,8 @@ import { Router, Routes, Params, CanActivate, ActivatedRoute,
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
-import { TranslatePipe } from '../../shared/translate/translate.pipe';
-import {ResumeVersionService} from '../../core/common/services/resume-version.service';
-import {ResumeVersion} from '../../shared/models';
+import { ResumeVersionService} from '../../core/common/services/resume-version.service';
+import { ResumeVersion} from '../../shared/models';
 import { Section } from '../../shared/models';
 
 @Component({    

@@ -1,7 +1,7 @@
 import {Component, OnInit, Input, Output, EventEmitter, AfterViewChecked, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
 import {PersonalInfo} from '../../shared/models';
-import { Account } from '../../shared/models';
+import { ContactAccount } from '../../shared/models';
 
 //import { TranslateComponent, TranslatePipe } from './'
 
@@ -51,7 +51,7 @@ class PersonalInfoComponent implements OnInit, AfterViewChecked {
     }
 
     addAccount(){
-        this.personalInfo.accountList.push(new Account());    
+        this.personalInfo.accountList.push(new ContactAccount());    
     }
     
     removeAccount(index: number){

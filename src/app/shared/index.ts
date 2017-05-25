@@ -10,27 +10,18 @@ import { ComponentsModule } from './components/components.module';
 
 import { ResumeModels } from './models';
 
-import { TranslateComponent } from './translate/translate.component';
-import { TranslateService, TranslateLanguage } from './translate/translate.service';
-import { TranslatePipe } from './translate/translate.pipe';
-import { LanguageDirPipe } from './translate/language-dir.pipe';
-import { TRANSLATION_PROVIDERS } from './translate/translations';
-
+import { TranslationModule } from './translation/translation.module';
+export  * from './translation/translation.module';
 import { MakeDraggableDirective } from './directives/make-draggable.directive';
 import { MakeDroppableDirective } from './directives/make-droppable.directive';
 
 
 @NgModule({
   imports: [
-    CommonModule,
-    // MaterialModule,
-    // MdlModule,
+    CommonModule,    
     IonicModule,
   ],
   declarations: [  
-      TranslateComponent, 
-      TranslatePipe, 
-      LanguageDirPipe,
       MakeDraggableDirective, 
       MakeDroppableDirective
     ],
@@ -44,16 +35,9 @@ import { MakeDroppableDirective } from './directives/make-droppable.directive';
     QuillEditorModule,
     ComponentsModule,
     ResumeModels,    
-    TranslateComponent, 
-    TranslatePipe, 
-    LanguageDirPipe, 
+    TranslationModule,
     MakeDraggableDirective, 
     MakeDroppableDirective    
-  ],
-  providers: [
-      TRANSLATION_PROVIDERS, 
-      TranslateService
-    ],
-  //schemas:[CUSTOM_ELEMENTS_SCHEMA]
+  ]
 })
 export class SharedModule { }

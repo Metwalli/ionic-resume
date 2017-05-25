@@ -14,7 +14,8 @@ export class MainMenuComponent implements OnInit {
   @Output() authAction = new EventEmitter<string>();
   ngOnInit() {
   }
-  elementClick(action: string){
+  authActionClick(action: string){
+    this.authService.authType = action;
     this.authAction.emit(action);   
   }
   public goToVersionList() {       

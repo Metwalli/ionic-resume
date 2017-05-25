@@ -1,14 +1,14 @@
   <ion-row>
-    <ion-col col-3>
+    <ion-col col-3 class="menu-list">
       <ion-list>
-        <button ion-item>
+        <a href="#personalInfo" ion-item>
           <ion-icon [name]="version.personalInfo.icon"></ion-icon>
-          {{version.personalInfo.title}}
-        </button>
-        <button ion-item *ngFor="let s of version.sectionList" [makeDraggable]="s" (dropped)="onDrop($event, s)">
+          {{version.personalInfo.title | translate }}
+        </a>
+        <a href="#section{{version.sectionList.indexOf(s)}}" ion-item *ngFor="let s of version.sectionList" [makeDraggable]="s" (dropped)="onDrop($event, s)">
           <ion-icon [name]="s.icon"></ion-icon> 
-          {{ s.title }}
-        </button>  
+          {{ s.title | translate }}
+        </a>  
       </ion-list>
     </ion-col>
     <ion-col col-9>
@@ -16,22 +16,23 @@
         <ion-toolbar>
           <ion-row>            
             <button ion-button small clear color="secondary">save</button>
-            <app-translate></app-translate>
+            <app-translation></app-translation>
           </ion-row>         
         </ion-toolbar>
       </ion-header>
       <div class="version-container" dir="{{'ltr' | languageDir }}">
         <ion-row justify-content-center>
           <ion-col class="card" col-12 center>
-            <personal-info [personalInfo]="version.personalInfo"></personal-info>
+            <personal-info id="personalInfo" [personalInfo]="version.personalInfo"></personal-info>
           </ion-col>
         </ion-row>
         <ion-row justify-content-center *ngFor="let s of version.sectionList">
           <ion-col class="card">
-            <section [section]="s" (removeSectionClick)="removeSection(version.sectionList.indexOf(s),$event)"></section>
+            <section id="section{{version.sectionList.indexOf(s)}}" [section]="s" (removeSectionClick)="removeSection(version.sectionList.indexOf(s),$event)"></section>
           </ion-col>
         </ion-row>
       </div>
-      <section-template style="{position: fixed;}" (sectionClick)="addSection($event)"></section-template>
+       <section-template (sectionClick)="addSection($event)"></section-template>
     </ion-col>
+    
   </ion-row>

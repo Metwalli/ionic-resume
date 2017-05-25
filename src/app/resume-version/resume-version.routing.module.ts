@@ -13,16 +13,22 @@ const routes: Routes = [
           component: ResumeVersionComponent,
           //canActivate:[AuthGuardService],
           children:[
+            { path: '', redirectTo: 'list', pathMatch: 'full'},
             {
               path: 'list',
               //canActivateChild: [AuthGuardService],
               children:[
                 { path: '', component: VersionListComponent },
-                { path: ':id', component: StandardVersionComponent, outlet: 'popup', }     
+                { path: ':id', component: VersionDetailComponent }     
               ]
-            }
+            },
+            {
+              path: 'new',
+              component: StandardVersionComponent
+            }     
           ]          
-        }                                               
+        },
+                                                  
     ];
 
 @NgModule({

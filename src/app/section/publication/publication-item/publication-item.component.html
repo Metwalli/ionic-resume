@@ -1,13 +1,39 @@
-<!--<form #sectionFrm = "ngForm" >
-		<div layout="row" layout-align="space-between center">
-			<md-input flex="45" style="max-width: 48%;" placeholder="{{ 'Name' | translate }}" [(ngModel)]="item.name" required name="name" #name="ngModel"></md-input>
-			<md-input flex="45" style="max-width: 48%;" placeholder="{{ 'Publisher' | translate }}" [(ngModel)]="item.publisher" name="publisher"></md-input>
-		</div>
-		<div layout="row" layout-align="space-between center">
-			<md-input flex="45" style="max-width: 48%;" type="url" placeholer="{{ 'URL' | translate }}" [(ngModel)]="item.url" name="url"></md-input>
-      <md-input flex="45" style="max-width: 48%;" type="date" placeholder="{{ 'Publication Date' | translate }}" [(ngModel)]="item.date" name="date"></md-input>
-		</div>			
-    <div layout="row" layout-align="space-between center">		
-			<md-textarea flex="100" placeholder="{{ 'Details' | translate }}" [(ngModel)]="item.details" name="details"></md-textarea>
-		</div>
-</form>-->
+<form #sectionFrm="ngForm">
+	<ion-row>
+		<ion-col col-12>
+			<ion-item>
+				<ion-label floating>{{ 'Name' | translate }}</ion-label>
+				<ion-input type="text" required [(ngModel)]="item.name" name="name" #name="ngModel"></ion-input>
+			</ion-item>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col col-6>
+			<ion-item>
+				<ion-label floating>{{ 'Publisher' | translate }}</ion-label>
+				<ion-input type="text" [(ngModel)]="item.publisher" name="publisher"></ion-input>
+			</ion-item>
+		</ion-col>
+		<ion-col col-6>
+			<ion-item>
+				<ion-label floating>{{ 'URL' | translate }}</ion-label>
+				<ion-input type="text" [(ngModel)]="item.url" name="url"></ion-input>
+			</ion-item>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col col-6>
+			<ion-item>
+				<ion-label floating>{{ 'Publication Date' | translate }}</ion-label>
+				<ion-input type="date" [(ngModel)]="item.date" name="date"></ion-input>
+			</ion-item>
+		</ion-col>
+		<ion-col col-offset-6>
+
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-label>{{ 'Details' | translate }}</ion-label>
+		<quill-editor [(ngModel)]="item.details" name="details"></quill-editor>
+	</ion-row>
+</form>

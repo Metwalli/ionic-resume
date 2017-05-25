@@ -1,14 +1,12 @@
-<!--<md-card-content>
-	<div *ngFor="let itm of section.itemList">
-		<button md-icon-button type="button" class="close" (click)="removeItem(section.itemList.indexOf(itm))"><md-icon>close</md-icon></button>
-		<td-expansion-panel label="{{itm.name || 'Volunteering' | translate }}" (click)="itemSelected(section.itemList.indexOf(itm))" [expand]="currentItemIndex == section.itemList.indexOf(itm)">
-			<div class="md-padding">
-				<volunteering-item [item]="itm"></volunteering-item>
-			</div>
-		</td-expansion-panel>
-	</div>
-</md-card-content>
-<md-divider></md-divider>
-<md-card-actions layout="row">
-	<a md-button (click)="addItem()">{{ 'Add Item' | translate }}</a>
-</md-card-actions>-->
+<ion-card-content>  
+<expansion-panel-group #panelGroup>
+	<expansion-panel *ngFor="let itm of section.itemList" [expanded]="true">
+		<expansion-panel-header>{{ itm.name || 'Volunteering' | translate }}</expansion-panel-header>
+		<expansion-panel-content>
+			<volunteering-item [item]="itm"></volunteering-item>
+		</expansion-panel-content>
+	</expansion-panel>
+</expansion-panel-group>
+ </ion-card-content>
+<divider></divider>
+<button ion-button small clear color="secondary" (click)="addItem()">{{ 'Add Item' | translate }}</button>

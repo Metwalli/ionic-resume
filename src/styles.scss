@@ -21,7 +21,7 @@
     font-size: 1.2rem;
 }
 form > ion-row {
-    max-height: 80px;
+    max-height: 200px;
 }
 ion-item.item-md {
     margin-bottom: 15px;
@@ -32,6 +32,9 @@ ion-item.item-md {
 
 quill-editor {
     width: 100%;
+    min-height: 160px;
+}
+.ql-toolbar.ql-snow + .ql-container.ql-snow{
     max-height: 100px;
 }
 .ql-container .ql-editor {

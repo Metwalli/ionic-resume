@@ -9,10 +9,13 @@ export class HobbyItemComponent implements OnInit {
   @Input() item: Hobby = new Hobby();
   constructor() { }
 
-  ngOnInit() {
-  }
-  
-  onChangeIcon(icn: string){
-      this.item.icon = icn;
+  ngOnInit() { }
+
+  onChangeIcon(icon: string) {
+    if (icon != null) {
+      if (icon == 'none') {
+        this.item.icon = "";
+      } else this.item.icon = icon;
+    }
   }
 }
